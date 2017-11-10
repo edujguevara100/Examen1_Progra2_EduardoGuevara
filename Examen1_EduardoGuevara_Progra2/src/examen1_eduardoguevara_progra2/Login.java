@@ -73,6 +73,12 @@ public class Login extends javax.swing.JFrame {
         tf_regpeso = new javax.swing.JTextField();
         Familia = new javax.swing.ButtonGroup();
         Sexo = new javax.swing.ButtonGroup();
+        jFrame1 = new javax.swing.JFrame();
+        jTabbedPane1 = new javax.swing.JTabbedPane();
+        jPanel1 = new javax.swing.JPanel();
+        jPanel2 = new javax.swing.JPanel();
+        jPanel3 = new javax.swing.JPanel();
+        jPanel4 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         tf_logname = new javax.swing.JTextField();
         tf_logcontra = new javax.swing.JTextField();
@@ -147,6 +153,11 @@ public class Login extends javax.swing.JFrame {
                 jButton1MouseClicked(evt);
             }
         });
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
         Register.getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 410, -1, -1));
 
         Familia.add(rb_personal);
@@ -193,11 +204,74 @@ public class Login extends javax.swing.JFrame {
         Register.getContentPane().add(tf_regalt, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 270, 120, 30));
         Register.getContentPane().add(tf_regpeso, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 320, 120, 30));
 
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 475, Short.MAX_VALUE)
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 350, Short.MAX_VALUE)
+        );
+
+        jTabbedPane1.addTab("tab1", jPanel1);
+
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 475, Short.MAX_VALUE)
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 350, Short.MAX_VALUE)
+        );
+
+        jTabbedPane1.addTab("tab2", jPanel2);
+
+        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
+        jPanel3.setLayout(jPanel3Layout);
+        jPanel3Layout.setHorizontalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 475, Short.MAX_VALUE)
+        );
+        jPanel3Layout.setVerticalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 350, Short.MAX_VALUE)
+        );
+
+        jTabbedPane1.addTab("tab3", jPanel3);
+
+        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
+        jPanel4.setLayout(jPanel4Layout);
+        jPanel4Layout.setHorizontalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 475, Short.MAX_VALUE)
+        );
+        jPanel4Layout.setVerticalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 350, Short.MAX_VALUE)
+        );
+
+        jTabbedPane1.addTab("tab4", jPanel4);
+
+        javax.swing.GroupLayout jFrame1Layout = new javax.swing.GroupLayout(jFrame1.getContentPane());
+        jFrame1.getContentPane().setLayout(jFrame1Layout);
+        jFrame1Layout.setHorizontalGroup(
+            jFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jTabbedPane1)
+        );
+        jFrame1Layout.setVerticalGroup(
+            jFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jTabbedPane1)
+        );
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel1.setText("Nombre:");
+        jLabel1.setText("Usuario:");
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 70, -1, 26));
         getContentPane().add(tf_logname, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 70, 127, 30));
         getContentPane().add(tf_logcontra, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 150, 127, 30));
@@ -207,6 +281,11 @@ public class Login extends javax.swing.JFrame {
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 150, 90, 30));
 
         bt_login.setText("Login");
+        bt_login.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                bt_loginMouseClicked(evt);
+            }
+        });
         getContentPane().add(bt_login, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 260, -1, -1));
 
         bt_register.setText("Register");
@@ -227,9 +306,16 @@ public class Login extends javax.swing.JFrame {
     private void bt_registerMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bt_registerMouseClicked
         // TODO add your handling code here:
         this.setVisible(false);
+        if (users.size() == 0) {
+            Kim.setUser("Kim");
+            Kim.setContra("admin");
+            users.add(Kim);
+        }
+        Register.pack();
         Register.setVisible(true);
         rb_personal.setSelected(true);
         rb_m.setSelected(true);
+        j_datet.setDate(new Date());
     }//GEN-LAST:event_bt_registerMouseClicked
 
     private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
@@ -241,7 +327,7 @@ public class Login extends javax.swing.JFrame {
                     cont++;
                 }
             }
-            if (cont == 7) {
+            if (cont == 8) {
                 JOptionPane.showMessageDialog(this, "Ya estan creados todos los familiares");
             }
         }
@@ -299,64 +385,109 @@ public class Login extends javax.swing.JFrame {
             } else {
                 val = true;
             }
-        } else {
-            val = true;
+        }
+        if (val == true) {
             String nombre = tf_regname.getText();
+            boolean usertaken = false;
             String user = tf_reguser.getText();
-            int edad = Integer.parseInt(tf_regedad.getText());
-            String contra = tf_regcontra.getText();
-            int id = Integer.parseInt(tf_regid.getText());
-            String sexo = "";
-            if (rb_m.isSelected()) {
-                sexo = "M";
-            } else {
-                sexo = "F";
+            for (int i = 0; i < users.size(); i++) {
+                if (tf_regname.getText().equals(users.get(i).getUser())) {
+                    usertaken = true;
+                    JOptionPane.showMessageDialog(this, "El usuario ya existe");
+                    break;
+                } else {
+                    usertaken = false;
+                }
             }
-            String estadoc = tf_regestc.getText();
-            String rol = "";
-            if (rb_madre.isSelected()) {
-                rol = "Madre";
-                String trabajo = tf_regtrab.getText();
-                float altura = Float.parseFloat(tf_regalt.getText());
-                float peso = Float.parseFloat(tf_regpeso.getText());
-                users.add(new Madre(trabajo, altura, peso, nombre, edad, id, sexo, estadoc, user, contra, rol));
-            } else if (rb_padre.isSelected()) {
-                rol = "Padre";
-                String trabajo = tf_regtrab.getText();
-                float altura = Float.parseFloat(tf_regalt.getText());
-                float peso = Float.parseFloat(tf_regpeso.getText());
-                users.add(new Padre(trabajo, altura, peso, nombre, edad, id, sexo, estadoc, user, contra, rol));
-            } else if (rb_hermano.isSelected()) {
-                rol = "Hermano";
-                String trabajo = tf_regtrab.getText();
-                float altura = Float.parseFloat(tf_regalt.getText());
-                float peso = Float.parseFloat(tf_regpeso.getText());
-                users.add(new Hermano(trabajo, altura, peso, nombre, edad, id, sexo, estadoc, user, contra, rol));
-            } else if (rb_hermana.isSelected()) {
-                rol = "Hermana";
-                String trabajo = tf_regtrab.getText();
-                float altura = Float.parseFloat(tf_regalt.getText());
-                float peso = Float.parseFloat(tf_regpeso.getText());
-                users.add(new Hermana(trabajo, altura, peso, nombre, edad, id, sexo, estadoc, user, contra, rol));
-            } else if (rb_esposo.isSelected()) {
-                rol = "Esposo";
-                String trabajo = tf_regtrab.getText();
-                float altura = Float.parseFloat(tf_regalt.getText());
-                float peso = Float.parseFloat(tf_regpeso.getText());
-                users.add(new Esposo(trabajo, altura, peso, nombre, edad, id, sexo, estadoc, user, contra, rol));
-            } else {
-                rol = "Personal";
-                String ocupacion = tf_regocu.getText();
-                String horario = tf_reghora.getText();
-                int tiempo = (int) (new Date().getTime() - j_datet.getDate().getTime() * 1000 * 60 * 60 * 24 / 7);
-                float sueldo = Float.parseFloat(tf_regsuel.getText());
-                users.add(new Personal(ocupacion, horario, tiempo, sueldo, nombre, edad, id, sexo, estadoc, user, contra, rol));
+            if (usertaken == false) {
+                int edad = Integer.parseInt(tf_regedad.getText());
+                String contra = tf_regcontra.getText();
+                int id = Integer.parseInt(tf_regid.getText());
+                String sexo = "";
+                if (rb_m.isSelected()) {
+                    sexo = "M";
+                } else {
+                    sexo = "F";
+                }
+                String estadoc = tf_regestc.getText();
+                String rol = "";
+                if (rb_madre.isSelected()) {
+                    rol = "Madre";
+                    String trabajo = tf_regtrab.getText();
+                    float altura = Float.parseFloat(tf_regalt.getText());
+                    float peso = Float.parseFloat(tf_regpeso.getText());
+                    users.add(new Madre(trabajo, altura, peso, nombre, edad, id, sexo, estadoc, user, contra, rol));
+                } else if (rb_padre.isSelected()) {
+                    rol = "Padre";
+                    String trabajo = tf_regtrab.getText();
+                    float altura = Float.parseFloat(tf_regalt.getText());
+                    float peso = Float.parseFloat(tf_regpeso.getText());
+                    users.add(new Padre(trabajo, altura, peso, nombre, edad, id, sexo, estadoc, user, contra, rol));
+                } else if (rb_hermano.isSelected()) {
+                    rol = "Hermano";
+                    String trabajo = tf_regtrab.getText();
+                    float altura = Float.parseFloat(tf_regalt.getText());
+                    float peso = Float.parseFloat(tf_regpeso.getText());
+                    users.add(new Hermano(trabajo, altura, peso, nombre, edad, id, sexo, estadoc, user, contra, rol));
+                } else if (rb_hermana.isSelected()) {
+                    rol = "Hermana";
+                    String trabajo = tf_regtrab.getText();
+                    float altura = Float.parseFloat(tf_regalt.getText());
+                    float peso = Float.parseFloat(tf_regpeso.getText());
+                    users.add(new Hermana(trabajo, altura, peso, nombre, edad, id, sexo, estadoc, user, contra, rol));
+                } else if (rb_esposo.isSelected()) {
+                    rol = "Esposo";
+                    String trabajo = tf_regtrab.getText();
+                    float altura = Float.parseFloat(tf_regalt.getText());
+                    float peso = Float.parseFloat(tf_regpeso.getText());
+                    users.add(new Esposo(trabajo, altura, peso, nombre, edad, id, sexo, estadoc, user, contra, rol));
+                } else {
+                    rol = "Personal";
+                    String ocupacion = tf_regocu.getText();
+                    String horario = tf_reghora.getText();
+                    int tiempo = (int) (new Date().getTime() - j_datet.getDate().getTime() * 1000 * 60 * 60 * 24 / 7);
+                    float sueldo = Float.parseFloat(tf_regsuel.getText());
+                    users.add(new Personal(ocupacion, horario, tiempo, sueldo, nombre, edad, id, sexo, estadoc, user, contra, rol));
+                }
+                Register.setVisible(false);
+                this.setVisible(true);
             }
-
         }
 
 
     }//GEN-LAST:event_jButton1MouseClicked
+
+    private void bt_loginMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bt_loginMouseClicked
+        // TODO add your handling code here:
+        if (users.size() == 0) {
+            Kim.setUser("Kim");
+            Kim.setContra("admin");
+            users.add(Kim);
+        }
+        String nombre = tf_logname.getText();
+        String contra = tf_logcontra.getText();
+        boolean x = false;
+        for (int i = 0; i < users.size(); i++) {
+            if (users.get(i).getUser().equals(nombre)) {
+                if (users.get(i).getContra().equals(contra)) {
+                    this.setVisible(false);
+                    actual = users.get(i);
+                    x = true;
+                    this.setVisible(false);
+
+                }
+            }
+        }
+        if (!x) {
+            JOptionPane.showMessageDialog(this, "El usuario no existe");
+        }
+        tf_logname.setText("");
+        tf_logcontra.setText("");
+    }//GEN-LAST:event_bt_loginMouseClicked
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -395,6 +526,7 @@ public class Login extends javax.swing.JFrame {
     ArrayList<Personas> users = new ArrayList();
     Personas actual;
     ArrayList<Mensajes> msgs;
+    Familiares Kim = new Familiares();
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.ButtonGroup Familia;
@@ -403,6 +535,7 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JButton bt_login;
     private javax.swing.JButton bt_register;
     private javax.swing.JButton jButton1;
+    private javax.swing.JFrame jFrame1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -422,6 +555,11 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel3;
+    private javax.swing.JPanel jPanel4;
+    private javax.swing.JTabbedPane jTabbedPane1;
     private com.toedter.calendar.JDateChooser j_datet;
     private javax.swing.JRadioButton rb_esposo;
     private javax.swing.JRadioButton rb_f;
