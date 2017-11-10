@@ -9,6 +9,49 @@ package examen1_eduardoguevara_progra2;
  *
  * @author edujg
  */
-public class Zapatos {
-    
+public class Zapatos extends Objetos {
+
+    private String talla;
+    private String tiposuela;
+    private int confort;
+
+    public Zapatos() {
+        super();
+    }
+
+    public Zapatos(String talla, String tiposuela, int confort) {
+        this.talla = talla;
+        this.tiposuela = tiposuela;
+        this.confort = confort;
+    }
+
+    public String getTalla() {
+        return talla;
+    }
+
+    public void setTalla(String talla) {
+        this.talla = talla;
+    }
+
+    public String getTiposuela() {
+        return tiposuela;
+    }
+
+    public void setTiposuela(String tiposuela) {
+        this.tiposuela = tiposuela;
+    }
+
+    public int getConfort() {
+        return confort;
+    }
+
+    public void setConfort(int confort) {
+        this.confort = confort;
+    }
+
+    @Override
+    public String toString() {
+        return "Zapatos{" + "talla=" + talla + ", tiposuela=" + tiposuela + ", confort=" + confort + '}';
+    }
+
 }

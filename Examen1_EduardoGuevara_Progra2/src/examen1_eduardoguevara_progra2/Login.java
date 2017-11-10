@@ -5,6 +5,8 @@
  */
 package examen1_eduardoguevara_progra2;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author edujg
@@ -27,21 +29,125 @@ public class Login extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        Register = new javax.swing.JFrame();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        tf_regname = new javax.swing.JTextField();
+        tf_reguser = new javax.swing.JTextField();
+        tf_regcontra = new javax.swing.JTextField();
+        tf_regedad = new javax.swing.JTextField();
+        tf_regid = new javax.swing.JTextField();
+        rb_madre = new javax.swing.JRadioButton();
+        rb_padre = new javax.swing.JRadioButton();
+        rb_hermano = new javax.swing.JRadioButton();
+        rb_hermana = new javax.swing.JRadioButton();
+        rb_esposo = new javax.swing.JRadioButton();
+        rb_m = new javax.swing.JRadioButton();
+        rb_f = new javax.swing.JRadioButton();
+        jButton1 = new javax.swing.JButton();
+        Familia = new javax.swing.ButtonGroup();
+        Sexo = new javax.swing.ButtonGroup();
+        jLabel1 = new javax.swing.JLabel();
+        tf_logname = new javax.swing.JTextField();
+        tf_logcontra = new javax.swing.JTextField();
+        jLabel2 = new javax.swing.JLabel();
+        bt_login = new javax.swing.JButton();
+        bt_register = new javax.swing.JButton();
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
-        );
+        Register.getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel3.setText("Nombre:");
+        Register.getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(51, 40, -1, -1));
+
+        jLabel4.setText("Usuario:");
+        Register.getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(51, 72, 49, -1));
+
+        jLabel5.setText("Contraseña:");
+        Register.getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(51, 104, -1, -1));
+
+        jLabel6.setText("Rol:");
+        Register.getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 160, -1, -1));
+
+        jLabel7.setText("Edad:");
+        Register.getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 200, -1, -1));
+
+        jLabel8.setText("ID:");
+        Register.getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 240, -1, -1));
+
+        jLabel9.setText("Sexo:");
+        Register.getContentPane().add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 290, -1, -1));
+        Register.getContentPane().add(tf_regname, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 30, 120, 30));
+        Register.getContentPane().add(tf_reguser, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 70, 120, 30));
+        Register.getContentPane().add(tf_regcontra, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 110, 120, 30));
+        Register.getContentPane().add(tf_regedad, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 190, 120, 30));
+        Register.getContentPane().add(tf_regid, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 230, 120, 30));
+
+        Familia.add(rb_madre);
+        rb_madre.setText("Madre");
+        rb_madre.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                rb_madreActionPerformed(evt);
+            }
+        });
+        Register.getContentPane().add(rb_madre, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 160, -1, -1));
+
+        Familia.add(rb_padre);
+        rb_padre.setText("Padre");
+        Register.getContentPane().add(rb_padre, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 160, -1, -1));
+
+        Familia.add(rb_hermano);
+        rb_hermano.setText("Hermano");
+        Register.getContentPane().add(rb_hermano, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 160, -1, -1));
+
+        Familia.add(rb_hermana);
+        rb_hermana.setText("Hermana");
+        Register.getContentPane().add(rb_hermana, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 160, -1, -1));
+
+        Familia.add(rb_esposo);
+        rb_esposo.setText("Esposo");
+        Register.getContentPane().add(rb_esposo, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 160, -1, -1));
+
+        Sexo.add(rb_m);
+        rb_m.setText("M");
+        Register.getContentPane().add(rb_m, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 290, -1, -1));
+
+        Sexo.add(rb_f);
+        rb_f.setText("F");
+        Register.getContentPane().add(rb_f, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 290, -1, -1));
+
+        jButton1.setText("Register");
+        Register.getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 310, -1, -1));
+
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel1.setText("Nombre:");
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 70, -1, 26));
+        getContentPane().add(tf_logname, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 70, 127, 30));
+        getContentPane().add(tf_logcontra, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 150, 127, 30));
+
+        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel2.setText("Contraseña:");
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 150, 90, 30));
+
+        bt_login.setText("Login");
+        getContentPane().add(bt_login, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 260, -1, -1));
+
+        bt_register.setText("Register");
+        getContentPane().add(bt_register, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 260, -1, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void rb_madreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rb_madreActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_rb_madreActionPerformed
 
     /**
      * @param args the command line arguments
@@ -77,7 +183,39 @@ public class Login extends javax.swing.JFrame {
             }
         });
     }
-
+    ArrayList<Personas> users = new ArrayList();
+    Personas actual;
+    ArrayList<Mensajes> msgs;
+    
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.ButtonGroup Familia;
+    private javax.swing.JFrame Register;
+    private javax.swing.ButtonGroup Sexo;
+    private javax.swing.JButton bt_login;
+    private javax.swing.JButton bt_register;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
+    private javax.swing.JRadioButton rb_esposo;
+    private javax.swing.JRadioButton rb_f;
+    private javax.swing.JRadioButton rb_hermana;
+    private javax.swing.JRadioButton rb_hermano;
+    private javax.swing.JRadioButton rb_m;
+    private javax.swing.JRadioButton rb_madre;
+    private javax.swing.JRadioButton rb_padre;
+    private javax.swing.JTextField tf_logcontra;
+    private javax.swing.JTextField tf_logname;
+    private javax.swing.JTextField tf_regcontra;
+    private javax.swing.JTextField tf_regedad;
+    private javax.swing.JTextField tf_regid;
+    private javax.swing.JTextField tf_regname;
+    private javax.swing.JTextField tf_reguser;
     // End of variables declaration//GEN-END:variables
 }
