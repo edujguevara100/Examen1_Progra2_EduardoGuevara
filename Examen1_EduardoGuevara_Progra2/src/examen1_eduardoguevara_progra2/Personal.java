@@ -5,6 +5,7 @@
  */
 package examen1_eduardoguevara_progra2;
 
+import java.util.ArrayList;
 import java.util.Date;
 
 /**
@@ -17,6 +18,7 @@ public class Personal extends Personas {
     private String horario;
     private int tiempo;
     private float sueldo;
+    private ArrayList<Mensajes> msgs = new ArrayList();
 
     public Personal() {
         super();
@@ -64,7 +66,7 @@ public class Personal extends Personas {
 
     @Override
     public String toString() {
-        return "Personal{" + "ocupacion=" + ocupacion + ", horario=" + horario + ", tiempo=" + tiempo + ", sueldo=" + sueldo + '}';
+        return super.getNombre();
     }
 
 }

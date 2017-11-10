@@ -19,4 +19,8 @@ public class Esposo extends Familiares {
         super(trabajo, altura, peso, nombre, edad, id, sexo, estadoc, user, contra, rol);
     }
 
+    @Override
+    public String toString() {
+        return super.getNombre();
+    }
 }

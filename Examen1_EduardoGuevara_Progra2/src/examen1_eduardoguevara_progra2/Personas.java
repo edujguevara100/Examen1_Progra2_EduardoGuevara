@@ -21,6 +21,7 @@ public class Personas {
     private String user;
     private String contra;
     private String rol;
+
     public Personas() {
     }
 
@@ -34,8 +35,6 @@ public class Personas {
         this.contra = contra;
         this.rol = rol;
     }
-
-    
 
     public String getUser() {
         return user;
@@ -103,7 +102,7 @@ public class Personas {
 
     @Override
     public String toString() {
-        return "Personas{" + "nombre=" + nombre + ", edad=" + edad + ", id=" + id + ", sexo=" + sexo + ", estadoc=" + estadoc + ", user=" + user + ", contra=" + contra + ", rol=" + rol + '}';
+        return nombre;
     }
 
 }

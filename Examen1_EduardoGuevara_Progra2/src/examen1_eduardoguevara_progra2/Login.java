@@ -7,6 +7,7 @@ package examen1_eduardoguevara_progra2;
 
 import java.util.ArrayList;
 import java.util.Date;
+import javax.swing.DefaultComboBoxModel;
 import javax.swing.JOptionPane;
 
 /**
@@ -73,12 +74,37 @@ public class Login extends javax.swing.JFrame {
         tf_regpeso = new javax.swing.JTextField();
         Familia = new javax.swing.ButtonGroup();
         Sexo = new javax.swing.ButtonGroup();
-        jFrame1 = new javax.swing.JFrame();
+        Acciones = new javax.swing.JFrame();
         jTabbedPane1 = new javax.swing.JTabbedPane();
-        jPanel1 = new javax.swing.JPanel();
-        jPanel2 = new javax.swing.JPanel();
-        jPanel3 = new javax.swing.JPanel();
-        jPanel4 = new javax.swing.JPanel();
+        tp_mensaj = new javax.swing.JPanel();
+        jButton2 = new javax.swing.JButton();
+        jButton3 = new javax.swing.JButton();
+        jLabel20 = new javax.swing.JLabel();
+        tp_list = new javax.swing.JPanel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTable1 = new javax.swing.JTable();
+        cb_list = new javax.swing.JComboBox<>();
+        jLabel21 = new javax.swing.JLabel();
+        tp_mod = new javax.swing.JPanel();
+        tp_elim = new javax.swing.JPanel();
+        jLabel22 = new javax.swing.JLabel();
+        jButton4 = new javax.swing.JButton();
+        cb_elim = new javax.swing.JComboBox<>();
+        tp_create = new javax.swing.JPanel();
+        jButton5 = new javax.swing.JButton();
+        jLabel23 = new javax.swing.JLabel();
+        jLabel24 = new javax.swing.JLabel();
+        jTextField1 = new javax.swing.JTextField();
+        jLabel25 = new javax.swing.JLabel();
+        jTextField2 = new javax.swing.JTextField();
+        jLabel26 = new javax.swing.JLabel();
+        jTextField3 = new javax.swing.JTextField();
+        jLabel27 = new javax.swing.JLabel();
+        jTextField4 = new javax.swing.JTextField();
+        jLabel28 = new javax.swing.JLabel();
+        jTextField5 = new javax.swing.JTextField();
+        jLabel29 = new javax.swing.JLabel();
+        cb_dueño = new javax.swing.JComboBox<>();
         jLabel1 = new javax.swing.JLabel();
         tf_logname = new javax.swing.JTextField();
         tf_logcontra = new javax.swing.JTextField();
@@ -204,66 +230,132 @@ public class Login extends javax.swing.JFrame {
         Register.getContentPane().add(tf_regalt, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 270, 120, 30));
         Register.getContentPane().add(tf_regpeso, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 320, 120, 30));
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 475, Short.MAX_VALUE)
+        tp_mensaj.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jButton2.setText("Enviar Mensajes");
+        tp_mensaj.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 170, 130, 30));
+
+        jButton3.setText("Ver Mensajes");
+        tp_mensaj.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 170, 120, 30));
+
+        jLabel20.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel20.setText("Bienvenido a la Mensajería:");
+        tp_mensaj.add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 40, -1, 30));
+
+        jTabbedPane1.addTab("Mensajeria", tp_mensaj);
+
+        tp_list.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "Nombre", "Edad", "Rol", "Sexo"
+            }
+        ) {
+            Class[] types = new Class [] {
+                java.lang.String.class, java.lang.Integer.class, java.lang.String.class, java.lang.String.class
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+        });
+        jScrollPane1.setViewportView(jTable1);
+
+        tp_list.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 90, 480, 280));
+
+        tp_list.add(cb_list, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 20, 130, 30));
+
+        jLabel21.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel21.setText("Seleccione una persona:");
+        tp_list.add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 20, 170, 30));
+
+        jTabbedPane1.addTab("Listar", tp_list);
+
+        javax.swing.GroupLayout tp_modLayout = new javax.swing.GroupLayout(tp_mod);
+        tp_mod.setLayout(tp_modLayout);
+        tp_modLayout.setHorizontalGroup(
+            tp_modLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 480, Short.MAX_VALUE)
         );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 350, Short.MAX_VALUE)
+        tp_modLayout.setVerticalGroup(
+            tp_modLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 380, Short.MAX_VALUE)
         );
 
-        jTabbedPane1.addTab("tab1", jPanel1);
+        jTabbedPane1.addTab("Modificar", tp_mod);
 
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 475, Short.MAX_VALUE)
-        );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 350, Short.MAX_VALUE)
-        );
+        tp_elim.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jTabbedPane1.addTab("tab2", jPanel2);
+        jLabel22.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel22.setText("Seleccione la Persona a la que desea Eliminar:");
+        tp_elim.add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 52, 319, 34));
 
-        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
-        jPanel3.setLayout(jPanel3Layout);
-        jPanel3Layout.setHorizontalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 475, Short.MAX_VALUE)
-        );
-        jPanel3Layout.setVerticalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 350, Short.MAX_VALUE)
-        );
+        jButton4.setText("Eliminar");
+        jButton4.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton4MouseClicked(evt);
+            }
+        });
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
+        tp_elim.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 210, -1, -1));
 
-        jTabbedPane1.addTab("tab3", jPanel3);
+        tp_elim.add(cb_elim, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 110, 130, 30));
 
-        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
-        jPanel4.setLayout(jPanel4Layout);
-        jPanel4Layout.setHorizontalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 475, Short.MAX_VALUE)
-        );
-        jPanel4Layout.setVerticalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 350, Short.MAX_VALUE)
-        );
+        jTabbedPane1.addTab("Eliminar", tp_elim);
 
-        jTabbedPane1.addTab("tab4", jPanel4);
+        tp_create.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        tp_create.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 40, 59, 41));
 
-        javax.swing.GroupLayout jFrame1Layout = new javax.swing.GroupLayout(jFrame1.getContentPane());
-        jFrame1.getContentPane().setLayout(jFrame1Layout);
-        jFrame1Layout.setHorizontalGroup(
-            jFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        jLabel23.setText("Color:");
+        tp_create.add(jLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 50, -1, -1));
+
+        jLabel24.setText("Descripcion:");
+        tp_create.add(jLabel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 110, -1, -1));
+        tp_create.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 110, 90, 20));
+
+        jLabel25.setText("Marca:");
+        tp_create.add(jLabel25, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 160, -1, -1));
+        tp_create.add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 160, 90, -1));
+
+        jLabel26.setText("Tamaño:");
+        tp_create.add(jLabel26, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 210, -1, -1));
+        tp_create.add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 210, 70, -1));
+
+        jLabel27.setText("Calidad:");
+        tp_create.add(jLabel27, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 260, -1, -1));
+        tp_create.add(jTextField4, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 260, 70, 20));
+
+        jLabel28.setText("Precio:");
+        tp_create.add(jLabel28, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 110, -1, -1));
+        tp_create.add(jTextField5, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 110, 70, -1));
+
+        jLabel29.setText("Dueño:");
+        tp_create.add(jLabel29, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 160, -1, -1));
+
+        cb_dueño.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cb_dueñoActionPerformed(evt);
+            }
+        });
+        tp_create.add(cb_dueño, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 160, 130, 30));
+
+        jTabbedPane1.addTab("Crear Objetos", tp_create);
+
+        javax.swing.GroupLayout AccionesLayout = new javax.swing.GroupLayout(Acciones.getContentPane());
+        Acciones.getContentPane().setLayout(AccionesLayout);
+        AccionesLayout.setHorizontalGroup(
+            AccionesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jTabbedPane1)
         );
-        jFrame1Layout.setVerticalGroup(
-            jFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        AccionesLayout.setVerticalGroup(
+            AccionesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jTabbedPane1)
         );
 
@@ -305,12 +397,22 @@ public class Login extends javax.swing.JFrame {
 
     private void bt_registerMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bt_registerMouseClicked
         // TODO add your handling code here:
-        this.setVisible(false);
-        if (users.size() == 0) {
+        if (users.contains(Kim) == false) {
+            Kim.setNombre("Kim Kardashan");
             Kim.setUser("Kim");
             Kim.setContra("admin");
             users.add(Kim);
+            DefaultComboBoxModel modelo = (DefaultComboBoxModel) cb_dueño.getModel();
+            modelo.addElement(Kim);
+            cb_dueño.setModel(modelo);
+            DefaultComboBoxModel model = (DefaultComboBoxModel) cb_list.getModel();
+            model.addElement(Kim);
+            cb_list.setModel(model);
+            DefaultComboBoxModel mode = (DefaultComboBoxModel) cb_elim.getModel();
+            mode.addElement(Kim);
+            cb_elim.setModel(mode);
         }
+        this.setVisible(false);
         Register.pack();
         Register.setVisible(true);
         rb_personal.setSelected(true);
@@ -459,10 +561,20 @@ public class Login extends javax.swing.JFrame {
 
     private void bt_loginMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bt_loginMouseClicked
         // TODO add your handling code here:
-        if (users.size() == 0) {
+        if (users.contains(Kim) == false) {
+            Kim.setNombre("Kim Kardashan");
             Kim.setUser("Kim");
             Kim.setContra("admin");
             users.add(Kim);
+            DefaultComboBoxModel modelo = (DefaultComboBoxModel) cb_dueño.getModel();
+            modelo.addElement(Kim);
+            cb_dueño.setModel(modelo);
+            DefaultComboBoxModel model = (DefaultComboBoxModel) cb_list.getModel();
+            model.addElement(Kim);
+            cb_list.setModel(model);
+            DefaultComboBoxModel mode = (DefaultComboBoxModel) cb_elim.getModel();
+            mode.addElement(Kim);
+            cb_elim.setModel(mode);
         }
         String nombre = tf_logname.getText();
         String contra = tf_logcontra.getText();
@@ -474,7 +586,47 @@ public class Login extends javax.swing.JFrame {
                     actual = users.get(i);
                     x = true;
                     this.setVisible(false);
+                    Acciones.pack();
+                    Acciones.setVisible(true);
+                    actual = users.get(i);
+                    DefaultComboBoxModel modelo = (DefaultComboBoxModel) cb_dueño.getModel();
+                    for (int b = 1; b < users.size(); b++) {
+                        modelo.addElement(users.get(i).getNombre());
+                    }
+                    cb_dueño.setModel(modelo);
+                    DefaultComboBoxModel model = (DefaultComboBoxModel) cb_list.getModel();
+                    for (int b = 1; b < users.size(); b++) {
+                        model.addElement(users.get(i).getNombre());
+                    }
+                    cb_list.setModel(model);
+                    DefaultComboBoxModel mode = (DefaultComboBoxModel) cb_elim.getModel();
+                    for (int b = 1; b < users.size(); b++) {
+                        mode.addElement(users.get(i).getNombre());
+                    }
+                    cb_elim.setModel(mode);
 
+                    if (users.contains(Kim) == false) {
+                        Kim.setNombre("Kim Kardashan");
+                        Kim.setUser("Kim");
+                        Kim.setContra("admin");
+                        users.add(Kim);
+                        DefaultComboBoxModel mod = (DefaultComboBoxModel) cb_dueño.getModel();
+                        modelo.addElement(Kim);
+                        cb_dueño.setModel(mod);
+                        DefaultComboBoxModel mod1 = (DefaultComboBoxModel) cb_list.getModel();
+                        model.addElement(Kim);
+                        cb_list.setModel(mod1);
+                        DefaultComboBoxModel mod2 = (DefaultComboBoxModel) cb_elim.getModel();
+                        mode.addElement(Kim);
+                        cb_elim.setModel(mod2);
+                    }
+                    if (actual.equals(Kim)) {
+
+                    } else {
+                        tp_elim.setEnabled(false);
+                        tp_mod.setEnabled(false);
+                        tp_create.setEnabled(false);
+                    }
                 }
             }
         }
@@ -488,6 +640,37 @@ public class Login extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void cb_dueñoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cb_dueñoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cb_dueñoActionPerformed
+
+    private void jButton4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton4MouseClicked
+        // TODO add your handling code here:
+        users.remove(cb_elim.getSelectedIndex());
+        DefaultComboBoxModel modelo = (DefaultComboBoxModel) cb_dueño.getModel();
+        modelo.removeAllElements();
+        for (int i = 0; i < users.size(); i++) {
+            modelo.addElement(users.get(i).getNombre());
+        }
+        cb_dueño.setModel(modelo);
+        DefaultComboBoxModel model = (DefaultComboBoxModel) cb_list.getModel();
+        model.removeAllElements();
+        for (int i = 0; i < users.size(); i++) {
+            model.addElement(users.get(i).getNombre());
+        }
+        cb_list.setModel(model);
+        DefaultComboBoxModel mode = (DefaultComboBoxModel) cb_elim.getModel();
+        mode.removeAllElements();
+        for (int i = 0; i < users.size(); i++) {
+            mode.addElement(users.get(i).getNombre());
+        }
+        cb_elim.setModel(mode);
+    }//GEN-LAST:event_jButton4MouseClicked
+
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton4ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -529,13 +712,20 @@ public class Login extends javax.swing.JFrame {
     Familiares Kim = new Familiares();
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JFrame Acciones;
     private javax.swing.ButtonGroup Familia;
     private javax.swing.JFrame Register;
     private javax.swing.ButtonGroup Sexo;
     private javax.swing.JButton bt_login;
     private javax.swing.JButton bt_register;
+    private javax.swing.JComboBox<String> cb_dueño;
+    private javax.swing.JComboBox<String> cb_elim;
+    private javax.swing.JComboBox<String> cb_list;
     private javax.swing.JButton jButton1;
-    private javax.swing.JFrame jFrame1;
+    private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
+    private javax.swing.JButton jButton4;
+    private javax.swing.JButton jButton5;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -548,6 +738,16 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel20;
+    private javax.swing.JLabel jLabel21;
+    private javax.swing.JLabel jLabel22;
+    private javax.swing.JLabel jLabel23;
+    private javax.swing.JLabel jLabel24;
+    private javax.swing.JLabel jLabel25;
+    private javax.swing.JLabel jLabel26;
+    private javax.swing.JLabel jLabel27;
+    private javax.swing.JLabel jLabel28;
+    private javax.swing.JLabel jLabel29;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
@@ -555,11 +755,14 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel jPanel3;
-    private javax.swing.JPanel jPanel4;
+    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTabbedPane jTabbedPane1;
+    private javax.swing.JTable jTable1;
+    private javax.swing.JTextField jTextField1;
+    private javax.swing.JTextField jTextField2;
+    private javax.swing.JTextField jTextField3;
+    private javax.swing.JTextField jTextField4;
+    private javax.swing.JTextField jTextField5;
     private com.toedter.calendar.JDateChooser j_datet;
     private javax.swing.JRadioButton rb_esposo;
     private javax.swing.JRadioButton rb_f;
@@ -583,5 +786,10 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JTextField tf_regsuel;
     private javax.swing.JTextField tf_regtrab;
     private javax.swing.JTextField tf_reguser;
+    private javax.swing.JPanel tp_create;
+    private javax.swing.JPanel tp_elim;
+    private javax.swing.JPanel tp_list;
+    private javax.swing.JPanel tp_mensaj;
+    private javax.swing.JPanel tp_mod;
     // End of variables declaration//GEN-END:variables
 }
