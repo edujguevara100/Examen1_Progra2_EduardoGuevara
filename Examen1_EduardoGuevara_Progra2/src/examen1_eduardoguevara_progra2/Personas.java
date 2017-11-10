@@ -20,13 +20,11 @@ public class Personas {
     private String estadoc;
     private String user;
     private String contra;
-    private ArrayList<Mensajes> msgs = new ArrayList();
-    private Rol rol;
-
+    private String rol;
     public Personas() {
     }
 
-    public Personas(String nombre, int edad, int id, String sexo, String estadoc, String user, String contra, Rol rol) {
+    public Personas(String nombre, int edad, int id, String sexo, String estadoc, String user, String contra, String rol) {
         this.nombre = nombre;
         this.edad = edad;
         this.id = id;
@@ -36,6 +34,8 @@ public class Personas {
         this.contra = contra;
         this.rol = rol;
     }
+
+    
 
     public String getUser() {
         return user;
@@ -53,17 +53,13 @@ public class Personas {
         this.contra = contra;
     }
 
-    public Rol getRol() {
+    public String getRol() {
         return rol;
     }
 
-    public void setRol(Rol rol) {
+    public void setRol(String rol) {
         this.rol = rol;
     }
-
-    
-
-    
 
     public String getNombre() {
         return nombre;
@@ -105,17 +101,9 @@ public class Personas {
         this.estadoc = estadoc;
     }
 
-    public ArrayList<Mensajes> getMsgs() {
-        return msgs;
-    }
-
-    public void setMsgs(ArrayList<Mensajes> msgs) {
-        this.msgs = msgs;
-    }
-
     @Override
     public String toString() {
-        return "Personas{" + "nombre=" + nombre + ", edad=" + edad + ", id=" + id + ", sexo=" + sexo + ", estadoc=" + estadoc + ", msgs=" + msgs + '}';
+        return "Personas{" + "nombre=" + nombre + ", edad=" + edad + ", id=" + id + ", sexo=" + sexo + ", estadoc=" + estadoc + ", user=" + user + ", contra=" + contra + ", rol=" + rol + '}';
     }
 
 }

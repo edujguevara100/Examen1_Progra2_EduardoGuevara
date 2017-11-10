@@ -15,14 +15,14 @@ public class Personal extends Personas {
 
     private String ocupacion;
     private String horario;
-    private Date tiempo;
+    private int tiempo;
     private float sueldo;
 
     public Personal() {
         super();
     }
 
-    public Personal(String ocupacion, String horario, Date tiempo, float sueldo, String nombre, int edad, int id, String sexo, String estadoc, String user, String contra, Rol rol) {
+    public Personal(String ocupacion, String horario, int tiempo, float sueldo, String nombre, int edad, int id, String sexo, String estadoc, String user, String contra, String rol) {
         super(nombre, edad, id, sexo, estadoc, user, contra, rol);
         this.ocupacion = ocupacion;
         this.horario = horario;
@@ -46,11 +46,11 @@ public class Personal extends Personas {
         this.horario = horario;
     }
 
-    public Date getTiempo() {
+    public int getTiempo() {
         return tiempo;
     }
 
-    public void setTiempo(Date tiempo) {
+    public void setTiempo(int tiempo) {
         this.tiempo = tiempo;
     }
 

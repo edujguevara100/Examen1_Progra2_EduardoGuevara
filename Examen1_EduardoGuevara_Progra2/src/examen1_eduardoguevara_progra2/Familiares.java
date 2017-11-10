@@ -17,16 +17,26 @@ public class Familiares extends Personas {
     private float altura;
     private float peso;
     private ArrayList<Objetos> pertenencias = new ArrayList();
-
+    private ArrayList<Mensajes> msgs = new ArrayList();
     public Familiares() {
         super();
     }
 
-    public Familiares(String trabajo, float altura, float peso, String nombre, int edad, int id, String sexo, String estadoc, String user, String contra, Rol rol) {
+    public Familiares(String trabajo, float altura, float peso, String nombre, int edad, int id, String sexo, String estadoc, String user, String contra, String rol) {
         super(nombre, edad, id, sexo, estadoc, user, contra, rol);
         this.trabajo = trabajo;
         this.altura = altura;
         this.peso = peso;
+    }
+
+    
+
+    public ArrayList<Mensajes> getMsgs() {
+        return msgs;
+    }
+
+    public void setMsgs(ArrayList<Mensajes> msgs) {
+        this.msgs = msgs;
     }
 
     public String getTrabajo() {
