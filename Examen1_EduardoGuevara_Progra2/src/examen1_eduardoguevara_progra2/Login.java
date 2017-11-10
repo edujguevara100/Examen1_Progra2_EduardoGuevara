@@ -551,9 +551,10 @@ public class Login extends javax.swing.JFrame {
                     float sueldo = Float.parseFloat(tf_regsuel.getText());
                     users.add(new Personal(ocupacion, horario, tiempo, sueldo, nombre, edad, id, sexo, estadoc, user, contra, rol));
                 }
-                Register.setVisible(false);
-                this.setVisible(true);
+
             }
+            Register.setVisible(false);
+            this.setVisible(true);
         }
 
 
