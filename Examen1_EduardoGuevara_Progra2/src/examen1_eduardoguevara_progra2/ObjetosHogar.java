@@ -5,6 +5,7 @@
  */
 package examen1_eduardoguevara_progra2;
 
+import java.awt.Color;
 import java.util.Date;
 
 /**
@@ -22,12 +23,15 @@ public class ObjetosHogar extends Objetos {
         super();
     }
 
-    public ObjetosHogar(Date lifetime, String areacasa, String instrucciones, Date fechacompra) {
+    public ObjetosHogar(Date lifetime, String areacasa, String instrucciones, Date fechacompra, Color color, String descripcion, String marca, int tam, int calidad, float precio, Personas dueño) {
+        super(color, descripcion, marca, tam, calidad, precio, dueño);
         this.lifetime = lifetime;
         this.areacasa = areacasa;
         this.instrucciones = instrucciones;
         this.fechacompra = fechacompra;
     }
+
+    
 
     public Date getLifetime() {
         return lifetime;

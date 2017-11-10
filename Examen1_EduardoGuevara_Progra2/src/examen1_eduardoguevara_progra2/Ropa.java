@@ -5,6 +5,8 @@
  */
 package examen1_eduardoguevara_progra2;
 
+import java.awt.Color;
+
 /**
  *
  * @author edujg
@@ -19,11 +21,14 @@ public class Ropa extends Objetos {
         super();
     }
 
-    public Ropa(int talla, String material, String paiselab) {
+    public Ropa(int talla, String material, String paiselab, Color color, String descripcion, String marca, int tam, int calidad, float precio, Personas dueño) {
+        super(color, descripcion, marca, tam, calidad, precio, dueño);
         this.talla = talla;
         this.material = material;
         this.paiselab = paiselab;
     }
+
+    
 
     public int getTalla() {
         return talla;

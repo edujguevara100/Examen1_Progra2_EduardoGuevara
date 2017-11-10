@@ -5,9 +5,11 @@
  */
 package examen1_eduardoguevara_progra2;
 
+import java.awt.Color;
 import java.util.ArrayList;
 import java.util.Date;
 import javax.swing.DefaultComboBoxModel;
+import javax.swing.JColorChooser;
 import javax.swing.JOptionPane;
 
 /**
@@ -91,20 +93,52 @@ public class Login extends javax.swing.JFrame {
         jButton4 = new javax.swing.JButton();
         cb_elim = new javax.swing.JComboBox<>();
         tp_create = new javax.swing.JPanel();
-        jButton5 = new javax.swing.JButton();
+        bt_color = new javax.swing.JButton();
         jLabel23 = new javax.swing.JLabel();
         jLabel24 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
+        tf_descript = new javax.swing.JTextField();
         jLabel25 = new javax.swing.JLabel();
-        jTextField2 = new javax.swing.JTextField();
+        tf_marca = new javax.swing.JTextField();
         jLabel26 = new javax.swing.JLabel();
-        jTextField3 = new javax.swing.JTextField();
+        tf_tamaño = new javax.swing.JTextField();
         jLabel27 = new javax.swing.JLabel();
-        jTextField4 = new javax.swing.JTextField();
+        tf_calidad = new javax.swing.JTextField();
         jLabel28 = new javax.swing.JLabel();
-        jTextField5 = new javax.swing.JTextField();
+        tf_precio = new javax.swing.JTextField();
         jLabel29 = new javax.swing.JLabel();
         cb_dueño = new javax.swing.JComboBox<>();
+        jLabel30 = new javax.swing.JLabel();
+        jLabel31 = new javax.swing.JLabel();
+        jLabel32 = new javax.swing.JLabel();
+        jLabel33 = new javax.swing.JLabel();
+        jLabel34 = new javax.swing.JLabel();
+        jLabel35 = new javax.swing.JLabel();
+        jLabel36 = new javax.swing.JLabel();
+        jLabel37 = new javax.swing.JLabel();
+        jLabel38 = new javax.swing.JLabel();
+        j_datelife = new com.toedter.calendar.JDateChooser();
+        jLabel39 = new javax.swing.JLabel();
+        jLabel40 = new javax.swing.JLabel();
+        jLabel41 = new javax.swing.JLabel();
+        jLabel42 = new javax.swing.JLabel();
+        j_datefc = new com.toedter.calendar.JDateChooser();
+        jTextField6 = new javax.swing.JTextField();
+        tf_suela = new javax.swing.JTextField();
+        tf_confort = new javax.swing.JTextField();
+        tf_talla = new javax.swing.JTextField();
+        tf_material = new javax.swing.JTextField();
+        tf_pelab = new javax.swing.JTextField();
+        rb_cocina = new javax.swing.JRadioButton();
+        rb_sala = new javax.swing.JRadioButton();
+        rb_habitacion = new javax.swing.JRadioButton();
+        tf_instruc = new javax.swing.JTextField();
+        jLabel43 = new javax.swing.JLabel();
+        rb_z = new javax.swing.JRadioButton();
+        rb_r = new javax.swing.JRadioButton();
+        rb_h = new javax.swing.JRadioButton();
+        Crear = new javax.swing.JButton();
+        buttonGroup1 = new javax.swing.ButtonGroup();
+        Tipo = new javax.swing.ButtonGroup();
         jLabel1 = new javax.swing.JLabel();
         tf_logname = new javax.swing.JTextField();
         tf_logcontra = new javax.swing.JTextField();
@@ -278,11 +312,11 @@ public class Login extends javax.swing.JFrame {
         tp_mod.setLayout(tp_modLayout);
         tp_modLayout.setHorizontalGroup(
             tp_modLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 480, Short.MAX_VALUE)
+            .addGap(0, 714, Short.MAX_VALUE)
         );
         tp_modLayout.setVerticalGroup(
             tp_modLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 380, Short.MAX_VALUE)
+            .addGap(0, 475, Short.MAX_VALUE)
         );
 
         jTabbedPane1.addTab("Modificar", tp_mod);
@@ -311,40 +345,132 @@ public class Login extends javax.swing.JFrame {
         jTabbedPane1.addTab("Eliminar", tp_elim);
 
         tp_create.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        tp_create.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 40, 59, 41));
+
+        bt_color.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                bt_colorMouseClicked(evt);
+            }
+        });
+        tp_create.add(bt_color, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 40, 59, 41));
 
         jLabel23.setText("Color:");
         tp_create.add(jLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 50, -1, -1));
 
         jLabel24.setText("Descripcion:");
         tp_create.add(jLabel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 110, -1, -1));
-        tp_create.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 110, 90, 20));
+        tp_create.add(tf_descript, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 110, 90, 20));
 
         jLabel25.setText("Marca:");
         tp_create.add(jLabel25, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 160, -1, -1));
-        tp_create.add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 160, 90, -1));
+        tp_create.add(tf_marca, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 160, 90, -1));
 
         jLabel26.setText("Tamaño:");
         tp_create.add(jLabel26, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 210, -1, -1));
-        tp_create.add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 210, 70, -1));
+        tp_create.add(tf_tamaño, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 210, 70, -1));
 
         jLabel27.setText("Calidad:");
         tp_create.add(jLabel27, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 260, -1, -1));
-        tp_create.add(jTextField4, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 260, 70, 20));
+        tp_create.add(tf_calidad, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 260, 70, 20));
 
         jLabel28.setText("Precio:");
-        tp_create.add(jLabel28, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 110, -1, -1));
-        tp_create.add(jTextField5, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 110, 70, -1));
+        tp_create.add(jLabel28, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 300, -1, -1));
+        tp_create.add(tf_precio, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 300, 70, -1));
 
         jLabel29.setText("Dueño:");
-        tp_create.add(jLabel29, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 160, -1, -1));
+        tp_create.add(jLabel29, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 340, -1, -1));
 
         cb_dueño.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cb_dueñoActionPerformed(evt);
             }
         });
-        tp_create.add(cb_dueño, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 160, 130, 30));
+        tp_create.add(cb_dueño, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 340, 130, 30));
+
+        jLabel30.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel30.setText("En caso de ser Zapatos:");
+        tp_create.add(jLabel30, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 20, 170, 30));
+
+        jLabel31.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel31.setText("En caso de ser Ropa:");
+        tp_create.add(jLabel31, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 30, -1, -1));
+
+        jLabel32.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel32.setText("En caso de ser articulo de hogar:");
+        tp_create.add(jLabel32, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 210, -1, -1));
+
+        jLabel33.setText("Talla:");
+        tp_create.add(jLabel33, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 70, -1, -1));
+
+        jLabel34.setText("Tipo de Suela:");
+        tp_create.add(jLabel34, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 110, -1, -1));
+
+        jLabel35.setText("Confort:");
+        tp_create.add(jLabel35, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 150, -1, -1));
+
+        jLabel36.setText("Talla:");
+        tp_create.add(jLabel36, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 70, -1, -1));
+
+        jLabel37.setText("Material:");
+        tp_create.add(jLabel37, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 110, -1, -1));
+
+        jLabel38.setText("Pais de Elaboracion:");
+        tp_create.add(jLabel38, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 140, -1, -1));
+        tp_create.add(j_datelife, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 250, -1, -1));
+
+        jLabel39.setText("Cuando acaba su Vida Util:");
+        tp_create.add(jLabel39, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 250, -1, -1));
+
+        jLabel40.setText("Area de la casa:");
+        tp_create.add(jLabel40, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 290, -1, -1));
+
+        jLabel41.setText("Instrucciones de armado:");
+        tp_create.add(jLabel41, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 330, -1, 20));
+
+        jLabel42.setText("Fecha de Compra:");
+        tp_create.add(jLabel42, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 370, -1, -1));
+        tp_create.add(j_datefc, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 370, -1, -1));
+        tp_create.add(jTextField6, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 60, 40, 30));
+        tp_create.add(tf_suela, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 110, 70, -1));
+        tp_create.add(tf_confort, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 140, 40, 30));
+        tp_create.add(tf_talla, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 60, 40, 30));
+        tp_create.add(tf_material, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 110, 80, 20));
+        tp_create.add(tf_pelab, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 160, 100, 30));
+
+        buttonGroup1.add(rb_cocina);
+        rb_cocina.setText("Cocina");
+        tp_create.add(rb_cocina, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 290, -1, -1));
+
+        buttonGroup1.add(rb_sala);
+        rb_sala.setText("Sala");
+        tp_create.add(rb_sala, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 290, -1, -1));
+
+        buttonGroup1.add(rb_habitacion);
+        rb_habitacion.setText("Habitacion");
+        tp_create.add(rb_habitacion, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 290, -1, -1));
+        tp_create.add(tf_instruc, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 330, 110, -1));
+
+        jLabel43.setText("Tipo:");
+        tp_create.add(jLabel43, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 400, -1, -1));
+
+        Tipo.add(rb_z);
+        rb_z.setText("Zapatos");
+        tp_create.add(rb_z, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 400, -1, -1));
+
+        Tipo.add(rb_r);
+        rb_r.setText("Ropa");
+        tp_create.add(rb_r, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 400, -1, -1));
+
+        Tipo.add(rb_h);
+        rb_h.setText("Hogar");
+        tp_create.add(rb_h, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 400, -1, -1));
+
+        Crear.setText("Crear");
+        Crear.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                CrearMouseClicked(evt);
+            }
+        });
+        tp_create.add(Crear, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 420, -1, -1));
 
         jTabbedPane1.addTab("Crear Objetos", tp_create);
 
@@ -376,6 +502,11 @@ public class Login extends javax.swing.JFrame {
         bt_login.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 bt_loginMouseClicked(evt);
+            }
+        });
+        bt_login.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bt_loginActionPerformed(evt);
             }
         });
         getContentPane().add(bt_login, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 260, -1, -1));
@@ -589,6 +720,8 @@ public class Login extends javax.swing.JFrame {
                     this.setVisible(false);
                     Acciones.pack();
                     Acciones.setVisible(true);
+                    rb_z.setSelected(true);
+                    rb_cocina.setSelected(true);
                     actual = users.get(i);
                     DefaultComboBoxModel modelo = (DefaultComboBoxModel) cb_dueño.getModel();
                     for (int b = 1; b < users.size(); b++) {
@@ -673,6 +806,52 @@ public class Login extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton4ActionPerformed
 
+    private void bt_colorMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bt_colorMouseClicked
+        // TODO add your handling code here:
+        bt_color.setBackground(JColorChooser.showDialog(this, "Seleccione un color", Color.yellow));
+    }//GEN-LAST:event_bt_colorMouseClicked
+
+    private void CrearMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CrearMouseClicked
+        // TODO add your handling code here:
+        Color color = bt_color.getForeground();
+        String descrip = tf_descript.getText();
+        String marca = tf_marca.getText();
+        int tam = Integer.parseInt(tf_tamaño.getText());
+        int calidad = Integer.parseInt(tf_calidad.getText());
+        float precio = Float.parseFloat(tf_precio.getText());
+        Personas due = (Personas) cb_dueño.getSelectedItem();
+        if (rb_z.isSelected()) {
+            int talla = Integer.parseInt(jTextField6.getText());
+            int confort = Integer.parseInt(tf_confort.getText());
+            String suela = tf_suela.getText();
+            ((Familiares) (due)).getPertenencias().add(new Zapatos(Integer.toString(talla), suela, confort, color, descrip, marca, tam, calidad, precio, due));
+
+        } else if (rb_r.isSelected()) {
+            int talla = Integer.parseInt(tf_talla.getText());
+            String material = tf_material.getText();
+            String paiselab = tf_pelab.getText();
+            ((Familiares) (due)).getPertenencias().add(new Ropa(talla, material, paiselab, color, descrip, marca, tam, calidad, precio, due));
+
+        } else {
+            Date lifetime = j_datelife.getDate();
+            Date fechac = j_datefc.getDate();
+            String area = "";
+            if (rb_cocina.isSelected()) {
+                area = "Cocina";
+            } else if (rb_sala.isSelected()) {
+                area = "Sala";
+            } else {
+                area = "Habitacion";
+            }
+            String instruc = tf_instruc.getText();
+            ((Familiares) (due)).getPertenencias().add(new ObjetosHogar(lifetime, area, instruc, fechac, color, descrip, marca, tam, calidad, precio, due));
+        }
+    }//GEN-LAST:event_CrearMouseClicked
+
+    private void bt_loginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_loginActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_bt_loginActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -714,11 +893,15 @@ public class Login extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JFrame Acciones;
+    private javax.swing.JButton Crear;
     private javax.swing.ButtonGroup Familia;
     private javax.swing.JFrame Register;
     private javax.swing.ButtonGroup Sexo;
+    private javax.swing.ButtonGroup Tipo;
+    private javax.swing.JButton bt_color;
     private javax.swing.JButton bt_login;
     private javax.swing.JButton bt_register;
+    private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JComboBox<String> cb_dueño;
     private javax.swing.JComboBox<String> cb_elim;
     private javax.swing.JComboBox<String> cb_list;
@@ -726,7 +909,6 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -750,7 +932,21 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel28;
     private javax.swing.JLabel jLabel29;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel30;
+    private javax.swing.JLabel jLabel31;
+    private javax.swing.JLabel jLabel32;
+    private javax.swing.JLabel jLabel33;
+    private javax.swing.JLabel jLabel34;
+    private javax.swing.JLabel jLabel35;
+    private javax.swing.JLabel jLabel36;
+    private javax.swing.JLabel jLabel37;
+    private javax.swing.JLabel jLabel38;
+    private javax.swing.JLabel jLabel39;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel40;
+    private javax.swing.JLabel jLabel41;
+    private javax.swing.JLabel jLabel42;
+    private javax.swing.JLabel jLabel43;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
@@ -759,22 +955,34 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JTable jTable1;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField4;
-    private javax.swing.JTextField jTextField5;
+    private javax.swing.JTextField jTextField6;
+    private com.toedter.calendar.JDateChooser j_datefc;
+    private com.toedter.calendar.JDateChooser j_datelife;
     private com.toedter.calendar.JDateChooser j_datet;
+    private javax.swing.JRadioButton rb_cocina;
     private javax.swing.JRadioButton rb_esposo;
     private javax.swing.JRadioButton rb_f;
+    private javax.swing.JRadioButton rb_h;
+    private javax.swing.JRadioButton rb_habitacion;
     private javax.swing.JRadioButton rb_hermana;
     private javax.swing.JRadioButton rb_hermano;
     private javax.swing.JRadioButton rb_m;
     private javax.swing.JRadioButton rb_madre;
     private javax.swing.JRadioButton rb_padre;
     private javax.swing.JRadioButton rb_personal;
+    private javax.swing.JRadioButton rb_r;
+    private javax.swing.JRadioButton rb_sala;
+    private javax.swing.JRadioButton rb_z;
+    private javax.swing.JTextField tf_calidad;
+    private javax.swing.JTextField tf_confort;
+    private javax.swing.JTextField tf_descript;
+    private javax.swing.JTextField tf_instruc;
     private javax.swing.JTextField tf_logcontra;
     private javax.swing.JTextField tf_logname;
+    private javax.swing.JTextField tf_marca;
+    private javax.swing.JTextField tf_material;
+    private javax.swing.JTextField tf_pelab;
+    private javax.swing.JTextField tf_precio;
     private javax.swing.JTextField tf_regalt;
     private javax.swing.JTextField tf_regcontra;
     private javax.swing.JTextField tf_regedad;
@@ -787,6 +995,9 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JTextField tf_regsuel;
     private javax.swing.JTextField tf_regtrab;
     private javax.swing.JTextField tf_reguser;
+    private javax.swing.JTextField tf_suela;
+    private javax.swing.JTextField tf_talla;
+    private javax.swing.JTextField tf_tamaño;
     private javax.swing.JPanel tp_create;
     private javax.swing.JPanel tp_elim;
     private javax.swing.JPanel tp_list;
