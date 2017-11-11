@@ -11,6 +11,7 @@ import java.util.Date;
 import javax.swing.DefaultComboBoxModel;
 import javax.swing.JColorChooser;
 import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
 
 /**
  *
@@ -71,12 +72,37 @@ public class Login extends javax.swing.JFrame {
         jLabel7 = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
         ta_mensaje = new javax.swing.JTextArea();
+        bt_salir = new javax.swing.JButton();
+        rb_c1 = new javax.swing.JRadioButton();
+        rb_c2 = new javax.swing.JRadioButton();
+        rb_c3 = new javax.swing.JRadioButton();
+        jLabel16 = new javax.swing.JLabel();
         tp_list = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
+        tabla1 = new javax.swing.JTable();
         cb_list = new javax.swing.JComboBox<>();
         jLabel21 = new javax.swing.JLabel();
+        bt_l = new javax.swing.JButton();
+        bt_clear = new javax.swing.JButton();
+        delete = new javax.swing.JButton();
         tp_mod = new javax.swing.JPanel();
+        cb_mod = new javax.swing.JComboBox<>();
+        jLabel8 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
+        jLabel12 = new javax.swing.JLabel();
+        jLabel13 = new javax.swing.JLabel();
+        jLabel14 = new javax.swing.JLabel();
+        jLabel15 = new javax.swing.JLabel();
+        modname = new javax.swing.JTextField();
+        modid = new javax.swing.JTextField();
+        modsex = new javax.swing.JTextField();
+        modec = new javax.swing.JTextField();
+        modedad = new javax.swing.JTextField();
+        moduser = new javax.swing.JTextField();
+        modcontra = new javax.swing.JTextField();
+        mods = new javax.swing.JButton();
         tp_elim = new javax.swing.JPanel();
         jLabel22 = new javax.swing.JLabel();
         jButton4 = new javax.swing.JButton();
@@ -129,6 +155,7 @@ public class Login extends javax.swing.JFrame {
         buttonGroup1 = new javax.swing.ButtonGroup();
         Tipo = new javax.swing.ButtonGroup();
         Rol = new javax.swing.ButtonGroup();
+        codificado = new javax.swing.ButtonGroup();
         jLabel1 = new javax.swing.JLabel();
         tf_logname = new javax.swing.JTextField();
         tf_logcontra = new javax.swing.JTextField();
@@ -141,36 +168,36 @@ public class Login extends javax.swing.JFrame {
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel44.setText("Nombre:");
-        jPanel1.add(jLabel44, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 66, -1, -1));
+        jPanel1.add(jLabel44, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 40, -1, -1));
 
         jLabel45.setText("Contra:");
-        jPanel1.add(jLabel45, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 107, -1, -1));
+        jPanel1.add(jLabel45, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 80, -1, -1));
 
         jLabel46.setText("User:");
-        jPanel1.add(jLabel46, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 149, -1, -1));
+        jPanel1.add(jLabel46, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 130, -1, -1));
         jPanel1.add(jLabel47, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 196, -1, -1));
 
         jLabel48.setText("Edad:");
-        jPanel1.add(jLabel48, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 190, -1, -1));
+        jPanel1.add(jLabel48, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 180, -1, -1));
 
         jLabel3.setText("ID");
         jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 220, -1, -1));
 
         jLabel4.setText("Sexo:");
-        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 250, -1, -1));
+        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 40, -1, -1));
 
         jLabel5.setText("Estado Civil:");
-        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 280, -1, -1));
+        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 90, -1, -1));
 
         jLabel6.setText("Rol:");
-        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 310, -1, -1));
-        jPanel1.add(tf_nombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 60, 100, 30));
-        jPanel1.add(tf_contraa, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 110, 110, -1));
-        jPanel1.add(tf_usern, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 150, 120, -1));
-        jPanel1.add(tf_age, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 190, 120, 20));
-        jPanel1.add(tf_ident, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 220, 130, 20));
-        jPanel1.add(tf_sex, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 250, 70, -1));
-        jPanel1.add(tf_ec, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 280, 70, 20));
+        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 150, -1, -1));
+        jPanel1.add(tf_nombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 30, 100, 30));
+        jPanel1.add(tf_contraa, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 80, 100, 30));
+        jPanel1.add(tf_usern, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 130, 100, 30));
+        jPanel1.add(tf_age, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 170, 40, 40));
+        jPanel1.add(tf_ident, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 220, 120, 30));
+        jPanel1.add(tf_sex, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 40, 70, 30));
+        jPanel1.add(tf_ec, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 90, 90, 30));
 
         Rol.add(rb_madre);
         rb_madre.setText("Madre:");
@@ -179,27 +206,27 @@ public class Login extends javax.swing.JFrame {
                 rb_madreActionPerformed(evt);
             }
         });
-        jPanel1.add(rb_madre, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 320, -1, -1));
+        jPanel1.add(rb_madre, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 150, -1, -1));
 
         Rol.add(rb_padre);
         rb_padre.setText("Padre:");
-        jPanel1.add(rb_padre, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 320, -1, -1));
+        jPanel1.add(rb_padre, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 150, -1, -1));
 
         Rol.add(rb_hermano);
         rb_hermano.setText("Hermano");
-        jPanel1.add(rb_hermano, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 320, -1, -1));
+        jPanel1.add(rb_hermano, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 150, -1, -1));
 
         Rol.add(rb_hermana);
         rb_hermana.setText("Hermana");
-        jPanel1.add(rb_hermana, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 360, -1, -1));
+        jPanel1.add(rb_hermana, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 200, -1, -1));
 
         Rol.add(rb_esposo);
         rb_esposo.setText("Esposo");
-        jPanel1.add(rb_esposo, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 360, -1, -1));
+        jPanel1.add(rb_esposo, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 200, -1, -1));
 
         Rol.add(rb_personal);
         rb_personal.setText("Personal");
-        jPanel1.add(rb_personal, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 360, -1, -1));
+        jPanel1.add(rb_personal, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 200, -1, -1));
 
         Registrar2.setText("Registrar");
         Registrar2.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -207,7 +234,7 @@ public class Login extends javax.swing.JFrame {
                 Registrar2MouseClicked(evt);
             }
         });
-        jPanel1.add(Registrar2, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 110, -1, -1));
+        jPanel1.add(Registrar2, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 320, 100, 40));
 
         Register.getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 760, 490));
 
@@ -244,11 +271,35 @@ public class Login extends javax.swing.JFrame {
 
         tp_mensaj.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 210, 220, 190));
 
+        bt_salir.setText("Salir");
+        bt_salir.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                bt_salirMouseClicked(evt);
+            }
+        });
+        tp_mensaj.add(bt_salir, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 330, 110, 30));
+
+        codificado.add(rb_c1);
+        rb_c1.setText("Cesar");
+        tp_mensaj.add(rb_c1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 280, -1, -1));
+
+        codificado.add(rb_c2);
+        rb_c2.setText("Vigenere");
+        tp_mensaj.add(rb_c2, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 280, -1, -1));
+
+        codificado.add(rb_c3);
+        rb_c3.setText("Transposicion");
+        tp_mensaj.add(rb_c3, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 280, -1, -1));
+
+        jLabel16.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel16.setText("En caso de ser mensajes entre Kim y su esposo:");
+        tp_mensaj.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 230, 290, 20));
+
         jTabbedPane1.addTab("Mensajeria", tp_mensaj);
 
         tp_list.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        tabla1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
             },
@@ -264,28 +315,94 @@ public class Login extends javax.swing.JFrame {
                 return types [columnIndex];
             }
         });
-        jScrollPane1.setViewportView(jTable1);
+        jScrollPane1.setViewportView(tabla1);
 
-        tp_list.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 90, 480, 280));
+        tp_list.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 80, 550, 340));
 
+        cb_list.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                cb_listItemStateChanged(evt);
+            }
+        });
         tp_list.add(cb_list, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 20, 130, 30));
 
         jLabel21.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel21.setText("Seleccione una persona:");
         tp_list.add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 20, 170, 30));
 
+        bt_l.setText("Listar");
+        bt_l.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                bt_lMouseClicked(evt);
+            }
+        });
+        tp_list.add(bt_l, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 20, 80, 30));
+
+        bt_clear.setText("Clear");
+        bt_clear.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                bt_clearMouseClicked(evt);
+            }
+        });
+        tp_list.add(bt_clear, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 20, 70, 30));
+
+        delete.setText("Delete");
+        delete.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                deleteMouseClicked(evt);
+            }
+        });
+        tp_list.add(delete, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 20, -1, 30));
+
         jTabbedPane1.addTab("Listar", tp_list);
 
-        javax.swing.GroupLayout tp_modLayout = new javax.swing.GroupLayout(tp_mod);
-        tp_mod.setLayout(tp_modLayout);
-        tp_modLayout.setHorizontalGroup(
-            tp_modLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 714, Short.MAX_VALUE)
-        );
-        tp_modLayout.setVerticalGroup(
-            tp_modLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 475, Short.MAX_VALUE)
-        );
+        tp_mod.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        cb_mod.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                cb_modItemStateChanged(evt);
+            }
+        });
+        tp_mod.add(cb_mod, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 30, 120, 30));
+
+        jLabel8.setText("Seleccione una persona:");
+        tp_mod.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 30, 120, 30));
+
+        jLabel9.setText("Nombre:");
+        tp_mod.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 110, 50, 20));
+
+        jLabel10.setText("User:");
+        tp_mod.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 100, -1, -1));
+
+        jLabel11.setText("Contraseña:");
+        tp_mod.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 150, -1, -1));
+
+        jLabel12.setText("ID:");
+        tp_mod.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 160, -1, -1));
+
+        jLabel13.setText("Sexo:");
+        tp_mod.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 210, -1, -1));
+
+        jLabel14.setText("Estado Civil:");
+        tp_mod.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 260, -1, -1));
+
+        jLabel15.setText("Edad:");
+        tp_mod.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 300, -1, -1));
+        tp_mod.add(modname, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 110, 100, 30));
+        tp_mod.add(modid, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 160, 100, 30));
+        tp_mod.add(modsex, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 200, 50, 30));
+        tp_mod.add(modec, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 250, 90, 30));
+        tp_mod.add(modedad, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 300, 40, 30));
+        tp_mod.add(moduser, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 90, 100, 30));
+        tp_mod.add(modcontra, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 150, 100, 30));
+
+        mods.setText("Modificar");
+        mods.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                modsMouseClicked(evt);
+            }
+        });
+        tp_mod.add(mods, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 280, 100, 30));
 
         jTabbedPane1.addTab("Modificar", tp_mod);
 
@@ -506,6 +623,12 @@ public class Login extends javax.swing.JFrame {
             DefaultComboBoxModel mode = (DefaultComboBoxModel) cb_elim.getModel();
             mode.addElement(Kim);
             cb_elim.setModel(mode);
+            DefaultComboBoxModel v = (DefaultComboBoxModel) cb_mensaje.getModel();
+            v.addElement(Kim);
+            cb_mensaje.setModel(v);
+            DefaultComboBoxModel j = (DefaultComboBoxModel) cb_mod.getModel();
+            j.addElement(Kim);
+            cb_mod.setModel(j);
         }
         this.setVisible(false);
         Register.pack();
@@ -531,6 +654,12 @@ public class Login extends javax.swing.JFrame {
             DefaultComboBoxModel mode = (DefaultComboBoxModel) cb_elim.getModel();
             mode.addElement(Kim);
             cb_elim.setModel(mode);
+            DefaultComboBoxModel v = (DefaultComboBoxModel) cb_mensaje.getModel();
+            v.addElement(Kim);
+            cb_mensaje.setModel(v);
+            DefaultComboBoxModel j = (DefaultComboBoxModel) cb_mod.getModel();
+            j.addElement(Kim);
+            cb_mod.setModel(j);
         }
         String nombre = tf_logname.getText();
         String contra = tf_logcontra.getText();
@@ -546,47 +675,27 @@ public class Login extends javax.swing.JFrame {
                     Acciones.setVisible(true);
                     rb_z.setSelected(true);
                     rb_cocina.setSelected(true);
-                    actual = users.get(i);
-                    /*DefaultComboBoxModel modelo = (DefaultComboBoxModel) cb_dueño.getModel();
-                    for (int b = 1; b < users.size(); b++) {
-                        modelo.addElement(users.get(i).getNombre());
-                    }
-                    cb_dueño.setModel(modelo);
-                    DefaultComboBoxModel model = (DefaultComboBoxModel) cb_list.getModel();
-                    for (int b = 1; b < users.size(); b++) {
-                        model.addElement(users.get(i).getNombre());
-                    }
-                    cb_list.setModel(model);
-                    DefaultComboBoxModel mode = (DefaultComboBoxModel) cb_elim.getModel();
-                    for (int b = 1; b < users.size(); b++) {
-                        mode.addElement(users.get(i).getNombre());
-                    }
-                    cb_elim.setModel(mode);
-                    */
+                    rb_c1.setSelected(true);
                     if (users.contains(Kim) == false) {
                         Kim.setNombre("Kim Kardashan");
                         Kim.setUser("Kim");
                         Kim.setContra("admin");
                         users.add(Kim);
                         DefaultComboBoxModel mod = (DefaultComboBoxModel) cb_dueño.getModel();
-                        modelo.addElement(Kim);
+                        mod.addElement(Kim);
                         cb_dueño.setModel(mod);
                         DefaultComboBoxModel mod1 = (DefaultComboBoxModel) cb_list.getModel();
-                        model.addElement(Kim);
+                        mod1.addElement(Kim);
                         cb_list.setModel(mod1);
                         DefaultComboBoxModel mod2 = (DefaultComboBoxModel) cb_elim.getModel();
-                        mode.addElement(Kim);
+                        mod2.addElement(Kim);
                         cb_elim.setModel(mod2);
                         DefaultComboBoxModel c = (DefaultComboBoxModel) cb_mensaje.getModel();
                         c.addElement(Kim);
                         cb_mensaje.setModel(c);
-                    }
-                    if (actual.equals(Kim)) {
-                        
-                    } else {
-                        tp_elim.setEnabled(false);
-                        tp_mod.setEnabled(false);
-                        tp_create.setEnabled(false);
+                        DefaultComboBoxModel j = (DefaultComboBoxModel) cb_mod.getModel();
+                        j.addElement(Kim);
+                        cb_mod.setModel(j);
                     }
                 }
             }
@@ -604,31 +713,41 @@ public class Login extends javax.swing.JFrame {
 
     private void jButton4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton4MouseClicked
         // TODO add your handling code here:
-        users.remove(cb_elim.getSelectedIndex());
-        DefaultComboBoxModel modelo = (DefaultComboBoxModel) cb_dueño.getModel();
-        modelo.removeAllElements();
-        for (int i = 0; i < users.size(); i++) {
-            modelo.addElement(users.get(i).getNombre());
+        if (actual.equals(Kim)) {
+            users.remove(cb_elim.getSelectedIndex());
+            DefaultComboBoxModel modelo = (DefaultComboBoxModel) cb_dueño.getModel();
+            modelo.removeAllElements();
+            for (int i = 0; i < users.size(); i++) {
+                modelo.addElement(users.get(i).getNombre());
+            }
+            cb_dueño.setModel(modelo);
+            DefaultComboBoxModel model = (DefaultComboBoxModel) cb_list.getModel();
+            model.removeAllElements();
+            for (int i = 0; i < users.size(); i++) {
+                model.addElement(users.get(i).getNombre());
+            }
+            cb_list.setModel(model);
+            DefaultComboBoxModel mode = (DefaultComboBoxModel) cb_elim.getModel();
+            mode.removeAllElements();
+            for (int i = 0; i < users.size(); i++) {
+                mode.addElement(users.get(i).getNombre());
+            }
+            cb_elim.setModel(mode);
+            DefaultComboBoxModel m = (DefaultComboBoxModel) cb_mensaje.getModel();
+            m.removeAllElements();
+            for (int i = 0; i < users.size(); i++) {
+                m.addElement(users.get(i).getNombre());
+            }
+            cb_mensaje.setModel(m);
+            DefaultComboBoxModel j = (DefaultComboBoxModel) cb_mod.getModel();
+            j.removeAllElements();
+            for (int i = 0; i < users.size(); i++) {
+                j.addElement(users.get(i).getNombre());
+            }
+            cb_mod.setModel(j);
+        } else {
+            JOptionPane.showMessageDialog(this, "Solo Kim tiene acceso a esta opcion");
         }
-        cb_dueño.setModel(modelo);
-        DefaultComboBoxModel model = (DefaultComboBoxModel) cb_list.getModel();
-        model.removeAllElements();
-        for (int i = 0; i < users.size(); i++) {
-            model.addElement(users.get(i).getNombre());
-        }
-        cb_list.setModel(model);
-        DefaultComboBoxModel mode = (DefaultComboBoxModel) cb_elim.getModel();
-        mode.removeAllElements();
-        for (int i = 0; i < users.size(); i++) {
-            mode.addElement(users.get(i).getNombre());
-        }
-        cb_elim.setModel(mode);
-        DefaultComboBoxModel m = (DefaultComboBoxModel) cb_mensaje.getModel();
-        m.removeAllElements();
-        for (int i = 0; i < users.size(); i++) {
-            m.addElement(users.get(i).getNombre());
-        }
-        cb_mensaje.setModel(m);
     }//GEN-LAST:event_jButton4MouseClicked
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
@@ -642,67 +761,71 @@ public class Login extends javax.swing.JFrame {
 
     private void CrearMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CrearMouseClicked
         // TODO add your handling code here:
-        Color color = bt_color.getBackground();
-        String descrip = tf_descript.getText();
-        String marca = tf_marca.getText();
-        int tam = Integer.parseInt(tf_tamaño.getText());
-        int calidad = Integer.parseInt(tf_calidad.getText());
-        float precio = Float.parseFloat(tf_precio.getText());
-        Personas due = (Personas) cb_dueño.getSelectedItem();
-        if (rb_z.isSelected()) {
-            int talla = Integer.parseInt(jTextField6.getText());
-            int confort = Integer.parseInt(tf_confort.getText());
-            String suela = tf_suela.getText();
-            ((Familiares) (due)).getPertenencias().add(new Zapatos(Integer.toString(talla), suela, confort, color, descrip, marca, tam, calidad, precio, due));
-            bt_color.setBackground(Color.red);
-            tf_descript.setText("");
-            tf_marca.setText("");
-            tf_tamaño.setText("");
-            tf_calidad.setText("");
-            tf_precio.setText("");
-            cb_dueño.setSelectedIndex(0);
-            jTextField6.setText("");
-            tf_confort.setText("");
-            tf_suela.setText("");
-            
-        } else if (rb_r.isSelected()) {
-            int talla = Integer.parseInt(tf_talla.getText());
-            String material = tf_material.getText();
-            String paiselab = tf_pelab.getText();
-            ((Familiares) (due)).getPertenencias().add(new Ropa(talla, material, paiselab, color, descrip, marca, tam, calidad, precio, due));
-            bt_color.setBackground(Color.red);
-            tf_descript.setText("");
-            tf_marca.setText("");
-            tf_tamaño.setText("");
-            tf_calidad.setText("");
-            tf_precio.setText("");
-            cb_dueño.setSelectedIndex(0);
-            tf_talla.setText("");
-            tf_material.setText("");
-            tf_pelab.setText("");
-        } else {
-            Date lifetime = j_datelife.getDate();
-            Date fechac = j_datefc.getDate();
-            String area = "";
-            if (rb_cocina.isSelected()) {
-                area = "Cocina";
-            } else if (rb_sala.isSelected()) {
-                area = "Sala";
+        if (actual.equals(Kim)) {
+            Color color = bt_color.getBackground();
+            String descrip = tf_descript.getText();
+            String marca = tf_marca.getText();
+            int tam = Integer.parseInt(tf_tamaño.getText());
+            int calidad = Integer.parseInt(tf_calidad.getText());
+            float precio = Float.parseFloat(tf_precio.getText());
+            Personas due = (Personas) cb_dueño.getSelectedItem();
+            if (rb_z.isSelected()) {
+                int talla = Integer.parseInt(jTextField6.getText());
+                int confort = Integer.parseInt(tf_confort.getText());
+                String suela = tf_suela.getText();
+                ((Familiares) (due)).getPertenencias().add(new Zapatos(Integer.toString(talla), suela, confort, color, descrip, marca, tam, calidad, precio, due));
+                bt_color.setBackground(Color.red);
+                tf_descript.setText("");
+                tf_marca.setText("");
+                tf_tamaño.setText("");
+                tf_calidad.setText("");
+                tf_precio.setText("");
+                cb_dueño.setSelectedIndex(0);
+                jTextField6.setText("");
+                tf_confort.setText("");
+                tf_suela.setText("");
+
+            } else if (rb_r.isSelected()) {
+                int talla = Integer.parseInt(tf_talla.getText());
+                String material = tf_material.getText();
+                String paiselab = tf_pelab.getText();
+                ((Familiares) (due)).getPertenencias().add(new Ropa(talla, material, paiselab, color, descrip, marca, tam, calidad, precio, due));
+                bt_color.setBackground(Color.red);
+                tf_descript.setText("");
+                tf_marca.setText("");
+                tf_tamaño.setText("");
+                tf_calidad.setText("");
+                tf_precio.setText("");
+                cb_dueño.setSelectedIndex(0);
+                tf_talla.setText("");
+                tf_material.setText("");
+                tf_pelab.setText("");
             } else {
-                area = "Habitacion";
+                Date lifetime = j_datelife.getDate();
+                Date fechac = j_datefc.getDate();
+                String area = "";
+                if (rb_cocina.isSelected()) {
+                    area = "Cocina";
+                } else if (rb_sala.isSelected()) {
+                    area = "Sala";
+                } else {
+                    area = "Habitacion";
+                }
+                String instruc = tf_instruc.getText();
+                ((Familiares) (due)).getPertenencias().add(new ObjetosHogar(lifetime, area, instruc, fechac, color, descrip, marca, tam, calidad, precio, due));
+                bt_color.setBackground(Color.red);
+                tf_descript.setText("");
+                tf_marca.setText("");
+                tf_tamaño.setText("");
+                tf_calidad.setText("");
+                tf_precio.setText("");
+                cb_dueño.setSelectedIndex(0);
+                j_datelife.setDate(new Date());
+                j_datefc.setDate(new Date());
+                tf_instruc.setText("");
             }
-            String instruc = tf_instruc.getText();
-            ((Familiares) (due)).getPertenencias().add(new ObjetosHogar(lifetime, area, instruc, fechac, color, descrip, marca, tam, calidad, precio, due));
-            bt_color.setBackground(Color.red);
-            tf_descript.setText("");
-            tf_marca.setText("");
-            tf_tamaño.setText("");
-            tf_calidad.setText("");
-            tf_precio.setText("");
-            cb_dueño.setSelectedIndex(0);
-            j_datelife.setDate(new Date());
-            j_datefc.setDate(new Date());
-            tf_instruc.setText("");
+        } else {
+            JOptionPane.showMessageDialog(this, "Esta opcion es solo para Kim");
         }
     }//GEN-LAST:event_CrearMouseClicked
 
@@ -764,6 +887,7 @@ public class Login extends javax.swing.JFrame {
                     }
                 }
                 if (val2 == true) {
+                    rol = "Padre";
                     users.add(new Padre(nombre, edad, id, sexo, est, user, contra, rol));
                     Register.setVisible(false);
                     this.setVisible(true);
@@ -779,6 +903,7 @@ public class Login extends javax.swing.JFrame {
                     }
                 }
                 if (val2 == true) {
+                    rol = "Hermano";
                     users.add(new Hermano(nombre, edad, id, sexo, est, user, contra, rol));
                     Register.setVisible(false);
                     this.setVisible(true);
@@ -790,13 +915,14 @@ public class Login extends javax.swing.JFrame {
                         cont++;
                     }
                 }
-                if (cont == 4) {
+                if (cont == 5) {
                     JOptionPane.showMessageDialog(this, "Ya estan las 4 hermanas");
                     val2 = false;
                 } else {
                     val2 = true;
                 }
                 if (val2 == true) {
+                    rol = "Hermana";
                     users.add(new Hermana(nombre, edad, id, sexo, est, user, contra, rol));
                     Register.setVisible(false);
                     this.setVisible(true);
@@ -812,11 +938,13 @@ public class Login extends javax.swing.JFrame {
                     }
                 }
                 if (val2 == true) {
+                    rol = "Esposo";
                     users.add(new Esposo(nombre, edad, id, sexo, est, user, contra, rol));
                     Register.setVisible(false);
                     this.setVisible(true);
                 }
             } else {
+                rol = "Personal";
                 users.add(new Personal(nombre, edad, id, sexo, est, user, contra, rol));
                 Register.setVisible(false);
                 this.setVisible(true);
@@ -833,26 +961,180 @@ public class Login extends javax.swing.JFrame {
             DefaultComboBoxModel m = (DefaultComboBoxModel) cb_mensaje.getModel();
             m.addElement(users.get(users.size() - 1));
             cb_mensaje.setModel(m);
-            
+            DefaultComboBoxModel j = (DefaultComboBoxModel) cb_mod.getModel();
+            j.addElement(users.get(users.size() - 1));
+            cb_mod.setModel(j);
+            tf_nombre.setText("");
+            tf_contraa.setText("");
+            tf_usern.setText("");
+            tf_age.setText("");
+            tf_ec.setText("");
+            tf_ident.setText("");
+            tf_sex.setText("");
         }
 
     }//GEN-LAST:event_Registrar2MouseClicked
 
     private void sendMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_sendMouseClicked
         // TODO add your handling code here:
-        Personas destinatario = (Personas) cb_mensaje.getSelectedItem();
-        String msg = ta_mensaje.getText();
-        ((Familiares) (destinatario)).getMsgs().add(new Mensajes(destinatario, msg));
-        ta_mensaje.setText("");
+        if ((actual.equals(Kim) && cb_mensaje.getSelectedItem() instanceof Esposo) || (actual instanceof Esposo && cb_mensaje.getSelectedItem().equals(Kim))) {
+            Personas dstinatario = (Personas) cb_mensaje.getSelectedItem();
+            if (rb_c1.isSelected()) {
+                Cesar();
+            } else if (rb_c2.isSelected()) {
+
+            } else {
+
+            }
+        } else {
+            Personas destinatario = (Personas) cb_mensaje.getSelectedItem();
+            String msg = ta_mensaje.getText();
+            if (destinatario instanceof Familiares) {
+                ((Familiares) (destinatario)).getMsgs().add(new Mensajes(actual, msg));
+            } else {
+                ((Personal) (destinatario)).getMsgs().add(new Mensajes(actual, msg));
+            }
+            ta_mensaje.setText("");
+            JOptionPane.showMessageDialog(this, actual.getNombre());
+        }
     }//GEN-LAST:event_sendMouseClicked
 
     private void seeMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_seeMouseClicked
         // TODO add your handling code here:
-        for (int i = 0; i < ((Familiares) (actual)).getMsgs().size(); i++) {
-            JOptionPane.showMessageDialog(this, "De: " + actual.getNombre() + "\n" + ((Familiares) (actual)).getMsgs().get(i).toString());
+        if (actual instanceof Familiares) {
+            for (int i = 0; i < ((Familiares) (actual)).getMsgs().size(); i++) {
+                JOptionPane.showMessageDialog(this, "De: " + ((Familiares) (actual)).getMsgs().get(i).getDestinatario() + "\n" + ((Familiares) (actual)).getMsgs().get(i).toString());
+            }
+        } else {
+            for (int i = 0; i < ((Personal) (actual)).getMsgs().size(); i++) {
+                JOptionPane.showMessageDialog(this, "De: " + ((Personal) (actual)).getMsgs().get(i).getDestinatario() + "\n" + ((Personal) (actual)).getMsgs().get(i).toString());
+            }
         }
 
     }//GEN-LAST:event_seeMouseClicked
+
+    private void bt_salirMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bt_salirMouseClicked
+        // TODO add your handling code here:
+        Acciones.setVisible(false);
+        this.setVisible(true);
+    }//GEN-LAST:event_bt_salirMouseClicked
+
+    private void cb_listItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_cb_listItemStateChanged
+        // TODO add your handling code here:
+
+    }//GEN-LAST:event_cb_listItemStateChanged
+
+    private void bt_lMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bt_lMouseClicked
+        // TODO add your handling code here:
+        Personas s = (Personas) cb_list.getSelectedItem();
+        Object[] newrow = {
+            s.getNombre(),
+            s.getEdad(),
+            s.getRol(),
+            s.getSexo()
+        };
+        DefaultTableModel modelo = (DefaultTableModel) tabla1.getModel();
+        modelo.addRow(newrow);
+        tabla1.setModel(modelo);
+    }//GEN-LAST:event_bt_lMouseClicked
+
+    private void bt_clearMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bt_clearMouseClicked
+        // TODO add your handling code here:
+        tabla1.setModel(new javax.swing.table.DefaultTableModel(
+                new Object[][]{},
+                new String[]{
+                    "Numero", "Nombre", "Edad", "Fecha"
+                }
+        ) {
+            Class[] types = new Class[]{
+                java.lang.Integer.class, java.lang.String.class, java.lang.Integer.class, java.lang.Object.class
+            };
+            boolean[] canEdit = new boolean[]{
+                false, false, false, false
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types[columnIndex];
+            }
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit[columnIndex];
+            }
+        });
+    }//GEN-LAST:event_bt_clearMouseClicked
+
+    private void deleteMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_deleteMouseClicked
+        // TODO add your handling code here:
+        if (tabla1.getSelectedRow() != -1) {
+            DefaultTableModel modelo = (DefaultTableModel) tabla1.getModel();
+            modelo.removeRow(tabla1.getSelectedRow());
+            tabla1.setModel(modelo);
+        } else {
+            JOptionPane.showMessageDialog(this, "No hay fila seleccionada");
+        }
+    }//GEN-LAST:event_deleteMouseClicked
+
+    private void cb_modItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_cb_modItemStateChanged
+        // TODO add your handling code here:
+        modname.setText(((Personas) (cb_mod.getSelectedItem())).getNombre());
+        modedad.setText(((Personas) (cb_mod.getSelectedItem())).getEdad() + "");
+        moduser.setText(((Personas) (cb_mod.getSelectedItem())).getUser());
+        modcontra.setText(((Personas) (cb_mod.getSelectedItem())).getContra());
+        modid.setText(((Personas) (cb_mod.getSelectedItem())).getId() + "");
+        modsex.setText(((Personas) (cb_mod.getSelectedItem())).getSexo());
+        modec.setText(((Personas) (cb_mod.getSelectedItem())).getEstadoc());
+    }//GEN-LAST:event_cb_modItemStateChanged
+
+    private void modsMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_modsMouseClicked
+        // TODO add your handling code here:
+        if (actual.equals(Kim)) {
+            ((Personas) (cb_mod.getSelectedItem())).setContra(modcontra.getText());
+            ((Personas) (cb_mod.getSelectedItem())).setNombre(modname.getText());
+            ((Personas) (cb_mod.getSelectedItem())).setEdad(Integer.parseInt(modedad.getText()));
+            ((Personas) (cb_mod.getSelectedItem())).setUser(moduser.getText());
+            ((Personas) (cb_mod.getSelectedItem())).setId(Integer.parseInt(modid.getText()));
+            ((Personas) (cb_mod.getSelectedItem())).setSexo(modsex.getText());
+            ((Personas) (cb_mod.getSelectedItem())).setEstadoc(modec.getText());
+
+        } else {
+            JOptionPane.showMessageDialog(this, "Opcion valida solo para Kim");
+        }
+    }//GEN-LAST:event_modsMouseClicked
+    public void Cesar() {
+        String msgo = ta_mensaje.getText();
+        String msg = "";
+        int letra;
+        for (int i = 0; i < msgo.length(); i++) {
+            letra = (int) msgo.charAt(i) - 3;
+            msg += (char) letra;
+        }
+        //JOptionPane.showMessageDialog(this, msg);
+    }
+
+    public void Transposicion() {
+        String clave = JOptionPane.showInputDialog("Ingrese la palabra clave:");
+        String msg = ta_mensaje.getText();
+        msg.replaceAll(" ", "");
+        int cont = 0;
+        char mat[][] = new char[msg.length() / clave.length()][clave.length()];
+        for (int i = 0; i < clave.length(); i++) {
+            mat[0][i] = clave.charAt(i);
+        }
+
+        for (int i = 0; i < mat.length; i++) {
+            for (int j = 1; j < mat[0].length; j++) {
+                if (cont <= msg.length()) {
+                    mat[i][j] += msg.charAt(cont);
+                    cont++;
+                } else {
+                    mat[i][j] = '|';
+                }
+            }
+        }
+        String fmsg = "";
+        
+        
+    }
 
     /**
      * @param args the command line arguments
@@ -891,7 +1173,7 @@ public class Login extends javax.swing.JFrame {
     ArrayList<Personas> users = new ArrayList();
     Personas actual;
     ArrayList<Mensajes> msgs;
-    Familiares Kim = new Familiares();
+    Familiares Kim = new Hermana();
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JFrame Acciones;
@@ -902,16 +1184,29 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.ButtonGroup Rol;
     private javax.swing.ButtonGroup Sexo;
     private javax.swing.ButtonGroup Tipo;
+    private javax.swing.JButton bt_clear;
     private javax.swing.JButton bt_color;
+    private javax.swing.JButton bt_l;
     private javax.swing.JButton bt_login;
     private javax.swing.JButton bt_register;
+    private javax.swing.JButton bt_salir;
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JComboBox<String> cb_dueño;
     private javax.swing.JComboBox<String> cb_elim;
     private javax.swing.JComboBox<String> cb_list;
     private javax.swing.JComboBox<String> cb_mensaje;
+    private javax.swing.JComboBox<String> cb_mod;
+    private javax.swing.ButtonGroup codificado;
+    private javax.swing.JButton delete;
     private javax.swing.JButton jButton4;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel21;
@@ -947,14 +1242,26 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTabbedPane jTabbedPane1;
-    private javax.swing.JTable jTable1;
     private javax.swing.JTextField jTextField6;
     private com.toedter.calendar.JDateChooser j_datefc;
     private com.toedter.calendar.JDateChooser j_datelife;
+    private javax.swing.JTextField modcontra;
+    private javax.swing.JTextField modec;
+    private javax.swing.JTextField modedad;
+    private javax.swing.JTextField modid;
+    private javax.swing.JTextField modname;
+    private javax.swing.JButton mods;
+    private javax.swing.JTextField modsex;
+    private javax.swing.JTextField moduser;
+    private javax.swing.JRadioButton rb_c1;
+    private javax.swing.JRadioButton rb_c2;
+    private javax.swing.JRadioButton rb_c3;
     private javax.swing.JRadioButton rb_cocina;
     private javax.swing.JRadioButton rb_esposo;
     private javax.swing.JRadioButton rb_h;
@@ -970,6 +1277,7 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JButton see;
     private javax.swing.JButton send;
     private javax.swing.JTextArea ta_mensaje;
+    private javax.swing.JTable tabla1;
     private javax.swing.JTextField tf_age;
     private javax.swing.JTextField tf_calidad;
     private javax.swing.JTextField tf_confort;

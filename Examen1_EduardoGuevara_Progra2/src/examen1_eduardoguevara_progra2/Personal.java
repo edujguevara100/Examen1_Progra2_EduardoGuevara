@@ -69,6 +69,14 @@ public class Personal extends Personas {
         this.sueldo = sueldo;
     }
 
+    public ArrayList<Mensajes> getMsgs() {
+        return msgs;
+    }
+
+    public void setMsgs(ArrayList<Mensajes> msgs) {
+        this.msgs = msgs;
+    }
+
     @Override
     public String toString() {
         return super.getNombre();
