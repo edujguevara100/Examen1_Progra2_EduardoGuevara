@@ -24,6 +24,11 @@ public class Personal extends Personas {
         super();
     }
 
+    public Personal(String nombre, int edad, int id, String sexo, String estadoc, String user, String contra, String rol) {
+        super(nombre, edad, id, sexo, estadoc, user, contra, rol);
+    }
+    
+
     public Personal(String ocupacion, String horario, int tiempo, float sueldo, String nombre, int edad, int id, String sexo, String estadoc, String user, String contra, String rol) {
         super(nombre, edad, id, sexo, estadoc, user, contra, rol);
         this.ocupacion = ocupacion;

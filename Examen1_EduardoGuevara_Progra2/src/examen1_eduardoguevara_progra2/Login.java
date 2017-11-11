@@ -35,53 +35,42 @@ public class Login extends javax.swing.JFrame {
     private void initComponents() {
 
         Register = new javax.swing.JFrame();
+        jPanel1 = new javax.swing.JPanel();
+        jLabel44 = new javax.swing.JLabel();
+        jLabel45 = new javax.swing.JLabel();
+        jLabel46 = new javax.swing.JLabel();
+        jLabel47 = new javax.swing.JLabel();
+        jLabel48 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
-        jLabel9 = new javax.swing.JLabel();
-        tf_regname = new javax.swing.JTextField();
-        tf_reguser = new javax.swing.JTextField();
-        tf_regcontra = new javax.swing.JTextField();
-        tf_regedad = new javax.swing.JTextField();
-        tf_regid = new javax.swing.JTextField();
+        tf_nombre = new javax.swing.JTextField();
+        tf_contraa = new javax.swing.JTextField();
+        tf_usern = new javax.swing.JTextField();
+        tf_age = new javax.swing.JTextField();
+        tf_ident = new javax.swing.JTextField();
+        tf_sex = new javax.swing.JTextField();
+        tf_ec = new javax.swing.JTextField();
         rb_madre = new javax.swing.JRadioButton();
         rb_padre = new javax.swing.JRadioButton();
         rb_hermano = new javax.swing.JRadioButton();
         rb_hermana = new javax.swing.JRadioButton();
         rb_esposo = new javax.swing.JRadioButton();
-        rb_m = new javax.swing.JRadioButton();
-        rb_f = new javax.swing.JRadioButton();
-        jButton1 = new javax.swing.JButton();
         rb_personal = new javax.swing.JRadioButton();
-        jLabel10 = new javax.swing.JLabel();
-        tf_regestc = new javax.swing.JTextField();
-        jLabel11 = new javax.swing.JLabel();
-        jLabel12 = new javax.swing.JLabel();
-        jLabel13 = new javax.swing.JLabel();
-        jLabel14 = new javax.swing.JLabel();
-        jLabel15 = new javax.swing.JLabel();
-        jLabel16 = new javax.swing.JLabel();
-        tf_regocu = new javax.swing.JTextField();
-        tf_reghora = new javax.swing.JTextField();
-        j_datet = new com.toedter.calendar.JDateChooser();
-        tf_regsuel = new javax.swing.JTextField();
-        jLabel17 = new javax.swing.JLabel();
-        jLabel18 = new javax.swing.JLabel();
-        jLabel19 = new javax.swing.JLabel();
-        tf_regtrab = new javax.swing.JTextField();
-        tf_regalt = new javax.swing.JTextField();
-        tf_regpeso = new javax.swing.JTextField();
+        Registrar2 = new javax.swing.JButton();
         Familia = new javax.swing.ButtonGroup();
         Sexo = new javax.swing.ButtonGroup();
         Acciones = new javax.swing.JFrame();
         jTabbedPane1 = new javax.swing.JTabbedPane();
         tp_mensaj = new javax.swing.JPanel();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
+        send = new javax.swing.JButton();
+        see = new javax.swing.JButton();
         jLabel20 = new javax.swing.JLabel();
+        cb_mensaje = new javax.swing.JComboBox<>();
+        jLabel7 = new javax.swing.JLabel();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        ta_mensaje = new javax.swing.JTextArea();
         tp_list = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
@@ -139,6 +128,7 @@ public class Login extends javax.swing.JFrame {
         Crear = new javax.swing.JButton();
         buttonGroup1 = new javax.swing.ButtonGroup();
         Tipo = new javax.swing.ButtonGroup();
+        Rol = new javax.swing.ButtonGroup();
         jLabel1 = new javax.swing.JLabel();
         tf_logname = new javax.swing.JTextField();
         tf_logcontra = new javax.swing.JTextField();
@@ -148,133 +138,111 @@ public class Login extends javax.swing.JFrame {
 
         Register.getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel3.setText("Nombre:");
-        Register.getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(51, 40, -1, -1));
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel4.setText("Usuario:");
-        Register.getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(51, 72, 49, -1));
+        jLabel44.setText("Nombre:");
+        jPanel1.add(jLabel44, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 66, -1, -1));
 
-        jLabel5.setText("Contraseña:");
-        Register.getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(51, 104, -1, -1));
+        jLabel45.setText("Contra:");
+        jPanel1.add(jLabel45, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 107, -1, -1));
+
+        jLabel46.setText("User:");
+        jPanel1.add(jLabel46, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 149, -1, -1));
+        jPanel1.add(jLabel47, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 196, -1, -1));
+
+        jLabel48.setText("Edad:");
+        jPanel1.add(jLabel48, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 190, -1, -1));
+
+        jLabel3.setText("ID");
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 220, -1, -1));
+
+        jLabel4.setText("Sexo:");
+        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 250, -1, -1));
+
+        jLabel5.setText("Estado Civil:");
+        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 280, -1, -1));
 
         jLabel6.setText("Rol:");
-        Register.getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 150, -1, -1));
+        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 310, -1, -1));
+        jPanel1.add(tf_nombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 60, 100, 30));
+        jPanel1.add(tf_contraa, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 110, 110, -1));
+        jPanel1.add(tf_usern, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 150, 120, -1));
+        jPanel1.add(tf_age, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 190, 120, 20));
+        jPanel1.add(tf_ident, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 220, 130, 20));
+        jPanel1.add(tf_sex, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 250, 70, -1));
+        jPanel1.add(tf_ec, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 280, 70, 20));
 
-        jLabel7.setText("Edad:");
-        Register.getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 230, -1, -1));
-
-        jLabel8.setText("ID:");
-        Register.getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 270, -1, -1));
-
-        jLabel9.setText("Sexo:");
-        Register.getContentPane().add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 350, -1, -1));
-        Register.getContentPane().add(tf_regname, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 30, 120, 30));
-        Register.getContentPane().add(tf_reguser, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 70, 120, 30));
-        Register.getContentPane().add(tf_regcontra, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 110, 120, 30));
-        Register.getContentPane().add(tf_regedad, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 220, 120, 30));
-        Register.getContentPane().add(tf_regid, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 260, 120, 30));
-
-        Familia.add(rb_madre);
-        rb_madre.setText("Madre");
+        Rol.add(rb_madre);
+        rb_madre.setText("Madre:");
         rb_madre.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 rb_madreActionPerformed(evt);
             }
         });
-        Register.getContentPane().add(rb_madre, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 150, -1, -1));
+        jPanel1.add(rb_madre, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 320, -1, -1));
 
-        Familia.add(rb_padre);
-        rb_padre.setText("Padre");
-        Register.getContentPane().add(rb_padre, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 150, -1, -1));
+        Rol.add(rb_padre);
+        rb_padre.setText("Padre:");
+        jPanel1.add(rb_padre, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 320, -1, -1));
 
-        Familia.add(rb_hermano);
+        Rol.add(rb_hermano);
         rb_hermano.setText("Hermano");
-        Register.getContentPane().add(rb_hermano, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 150, -1, -1));
+        jPanel1.add(rb_hermano, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 320, -1, -1));
 
-        Familia.add(rb_hermana);
+        Rol.add(rb_hermana);
         rb_hermana.setText("Hermana");
-        Register.getContentPane().add(rb_hermana, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 180, -1, -1));
+        jPanel1.add(rb_hermana, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 360, -1, -1));
 
-        Familia.add(rb_esposo);
+        Rol.add(rb_esposo);
         rb_esposo.setText("Esposo");
-        Register.getContentPane().add(rb_esposo, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 180, -1, -1));
+        jPanel1.add(rb_esposo, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 360, -1, -1));
 
-        Sexo.add(rb_m);
-        rb_m.setText("M");
-        Register.getContentPane().add(rb_m, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 350, -1, -1));
-
-        Sexo.add(rb_f);
-        rb_f.setText("F");
-        Register.getContentPane().add(rb_f, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 350, -1, -1));
-
-        jButton1.setText("Register");
-        jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jButton1MouseClicked(evt);
-            }
-        });
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
-            }
-        });
-        Register.getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 410, -1, -1));
-
-        Familia.add(rb_personal);
+        Rol.add(rb_personal);
         rb_personal.setText("Personal");
-        Register.getContentPane().add(rb_personal, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 180, -1, -1));
+        jPanel1.add(rb_personal, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 360, -1, -1));
 
-        jLabel10.setText("Estado Civil:");
-        Register.getContentPane().add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 310, -1, -1));
-        Register.getContentPane().add(tf_regestc, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 300, 120, 30));
+        Registrar2.setText("Registrar");
+        Registrar2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                Registrar2MouseClicked(evt);
+            }
+        });
+        jPanel1.add(Registrar2, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 110, -1, -1));
 
-        jLabel11.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel11.setText("En caso de ser Personal:");
-        Register.getContentPane().add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 20, 170, 30));
-
-        jLabel12.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel12.setText("En caso de ser algun Familiar:");
-        Register.getContentPane().add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 190, -1, -1));
-
-        jLabel13.setText("Ocupacion:");
-        Register.getContentPane().add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 60, -1, -1));
-
-        jLabel14.setText("Horario:");
-        Register.getContentPane().add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 90, -1, -1));
-
-        jLabel15.setText("Desde cuando trabaja:");
-        Register.getContentPane().add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 130, -1, -1));
-
-        jLabel16.setText("Sueldo:");
-        Register.getContentPane().add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 160, -1, -1));
-        Register.getContentPane().add(tf_regocu, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 60, 100, 20));
-        Register.getContentPane().add(tf_reghora, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 90, 90, 20));
-        Register.getContentPane().add(j_datet, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 130, -1, -1));
-        Register.getContentPane().add(tf_regsuel, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 160, 100, 20));
-
-        jLabel17.setText("Trabajo:");
-        Register.getContentPane().add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 220, -1, -1));
-
-        jLabel18.setText("Altura:");
-        Register.getContentPane().add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 270, -1, -1));
-
-        jLabel19.setText("Peso:");
-        Register.getContentPane().add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 320, -1, -1));
-        Register.getContentPane().add(tf_regtrab, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 220, 120, 30));
-        Register.getContentPane().add(tf_regalt, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 270, 120, 30));
-        Register.getContentPane().add(tf_regpeso, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 320, 120, 30));
+        Register.getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 760, 490));
 
         tp_mensaj.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jButton2.setText("Enviar Mensajes");
-        tp_mensaj.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 170, 130, 30));
+        send.setText("Enviar Mensajes");
+        send.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                sendMouseClicked(evt);
+            }
+        });
+        tp_mensaj.add(send, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 170, 130, 30));
 
-        jButton3.setText("Ver Mensajes");
-        tp_mensaj.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 170, 120, 30));
+        see.setText("Ver Mensajes");
+        see.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                seeMouseClicked(evt);
+            }
+        });
+        tp_mensaj.add(see, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 170, 120, 30));
 
         jLabel20.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel20.setText("Bienvenido a la Mensajería:");
         tp_mensaj.add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 40, -1, 30));
+
+        tp_mensaj.add(cb_mensaje, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 90, 130, 30));
+
+        jLabel7.setText("Mensaje a enviar:");
+        tp_mensaj.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 190, -1, -1));
+
+        ta_mensaje.setColumns(20);
+        ta_mensaje.setRows(5);
+        jScrollPane2.setViewportView(ta_mensaje);
+
+        tp_mensaj.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 210, 220, 190));
 
         jTabbedPane1.addTab("Mensajeria", tp_mensaj);
 
@@ -522,10 +490,6 @@ public class Login extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void rb_madreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rb_madreActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_rb_madreActionPerformed
-
     private void bt_registerMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bt_registerMouseClicked
         // TODO add your handling code here:
         if (users.contains(Kim) == false) {
@@ -547,149 +511,9 @@ public class Login extends javax.swing.JFrame {
         Register.pack();
         Register.setVisible(true);
         rb_personal.setSelected(true);
-        rb_m.setSelected(true);
-        j_datet.setDate(new Date());
+        //rb_m.setSelected(true);
+        //j_datet.setDate(new Date());
     }//GEN-LAST:event_bt_registerMouseClicked
-
-    private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
-        // TODO add your handling code here:
-        if (rb_madre.isSelected() || rb_padre.isSelected() || rb_hermano.isSelected() || rb_hermana.isSelected() || rb_esposo.isSelected()) {
-            int cont = 0;
-            for (int i = 0; i < users.size(); i++) {
-                if (users.get(i) instanceof Familiares) {
-                    cont++;
-                }
-            }
-            if (cont == 8) {
-                JOptionPane.showMessageDialog(this, "Ya estan creados todos los familiares");
-            }
-        }
-        boolean val = false;
-        if (rb_madre.isSelected()) {
-            for (int i = 0; i < users.size(); i++) {
-                if (users.get(i) instanceof Madre) {
-                    JOptionPane.showMessageDialog(this, "La madre de Kim ya esta creada");
-                    val = false;
-                    break;
-                } else {
-                    val = true;
-                }
-            }
-        } else if (rb_padre.isSelected()) {
-            for (int i = 0; i < users.size(); i++) {
-                if (users.get(i) instanceof Padre) {
-                    JOptionPane.showMessageDialog(this, "El padre de Kim ya esta creado");
-                    val = false;
-                    break;
-                } else {
-                    val = true;
-                }
-            }
-        } else if (rb_esposo.isSelected()) {
-            for (int i = 0; i < users.size(); i++) {
-                if (users.get(i) instanceof Esposo) {
-                    JOptionPane.showMessageDialog(this, "El esposo de Kim ya esta creado");
-                    val = false;
-                    break;
-                } else {
-                    val = true;
-                }
-            }
-        } else if (rb_hermano.isSelected()) {
-            for (int i = 0; i < users.size(); i++) {
-                if (users.get(i) instanceof Hermano) {
-                    JOptionPane.showMessageDialog(this, "El hermano de Kim ya esta creado");
-                    val = false;
-                    break;
-                } else {
-                    val = true;
-                }
-            }
-        } else if (rb_hermana.isSelected()) {
-            int ha = 0;
-            for (int i = 0; i < users.size(); i++) {
-                if (users.get(i) instanceof Hermana) {
-                    ha++;
-                }
-            }
-            if (ha == 4) {
-                JOptionPane.showMessageDialog(this, "Ya estan creadas todas las hermanas de Kim");
-                val = false;
-            } else {
-                val = true;
-            }
-        }
-        if (val == true) {
-            String nombre = tf_regname.getText();
-            boolean usertaken = false;
-            String user = tf_reguser.getText();
-            for (int i = 0; i < users.size(); i++) {
-                if (tf_regname.getText().equals(users.get(i).getUser())) {
-                    usertaken = true;
-                    JOptionPane.showMessageDialog(this, "El usuario ya existe");
-                    break;
-                } else {
-                    usertaken = false;
-                }
-            }
-            if (usertaken == false) {
-                int edad = Integer.parseInt(tf_regedad.getText());
-                String contra = tf_regcontra.getText();
-                int id = Integer.parseInt(tf_regid.getText());
-                String sexo = "";
-                if (rb_m.isSelected()) {
-                    sexo = "M";
-                } else {
-                    sexo = "F";
-                }
-                String estadoc = tf_regestc.getText();
-                String rol = "";
-                if (rb_madre.isSelected()) {
-                    rol = "Madre";
-                    String trabajo = tf_regtrab.getText();
-                    float altura = Float.parseFloat(tf_regalt.getText());
-                    float peso = Float.parseFloat(tf_regpeso.getText());
-                    users.add(new Madre(trabajo, altura, peso, nombre, edad, id, sexo, estadoc, user, contra, rol));
-                } else if (rb_padre.isSelected()) {
-                    rol = "Padre";
-                    String trabajo = tf_regtrab.getText();
-                    float altura = Float.parseFloat(tf_regalt.getText());
-                    float peso = Float.parseFloat(tf_regpeso.getText());
-                    users.add(new Padre(trabajo, altura, peso, nombre, edad, id, sexo, estadoc, user, contra, rol));
-                } else if (rb_hermano.isSelected()) {
-                    rol = "Hermano";
-                    String trabajo = tf_regtrab.getText();
-                    float altura = Float.parseFloat(tf_regalt.getText());
-                    float peso = Float.parseFloat(tf_regpeso.getText());
-                    users.add(new Hermano(trabajo, altura, peso, nombre, edad, id, sexo, estadoc, user, contra, rol));
-                } else if (rb_hermana.isSelected()) {
-                    rol = "Hermana";
-                    String trabajo = tf_regtrab.getText();
-                    float altura = Float.parseFloat(tf_regalt.getText());
-                    float peso = Float.parseFloat(tf_regpeso.getText());
-                    users.add(new Hermana(trabajo, altura, peso, nombre, edad, id, sexo, estadoc, user, contra, rol));
-                } else if (rb_esposo.isSelected()) {
-                    rol = "Esposo";
-                    String trabajo = tf_regtrab.getText();
-                    float altura = Float.parseFloat(tf_regalt.getText());
-                    float peso = Float.parseFloat(tf_regpeso.getText());
-                    users.add(new Esposo(trabajo, altura, peso, nombre, edad, id, sexo, estadoc, user, contra, rol));
-                } else {
-                    rol = "Personal";
-                    String ocupacion = tf_regocu.getText();
-                    String horario = tf_reghora.getText();
-                    int tiempo = (int) (new Date().getTime() - j_datet.getDate().getTime() * 1000 * 60 * 60 * 24 / 7);
-                    float sueldo = Float.parseFloat(tf_regsuel.getText());
-                    users.add(new Personal(ocupacion, horario, tiempo, sueldo, nombre, edad, id, sexo, estadoc, user, contra, rol));
-                }
-
-            }
-            Register.setVisible(false);
-            this.setVisible(true);
-        }
-
-
-    }//GEN-LAST:event_jButton1MouseClicked
 
     private void bt_loginMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bt_loginMouseClicked
         // TODO add your handling code here:
@@ -723,7 +547,7 @@ public class Login extends javax.swing.JFrame {
                     rb_z.setSelected(true);
                     rb_cocina.setSelected(true);
                     actual = users.get(i);
-                    DefaultComboBoxModel modelo = (DefaultComboBoxModel) cb_dueño.getModel();
+                    /*DefaultComboBoxModel modelo = (DefaultComboBoxModel) cb_dueño.getModel();
                     for (int b = 1; b < users.size(); b++) {
                         modelo.addElement(users.get(i).getNombre());
                     }
@@ -738,7 +562,7 @@ public class Login extends javax.swing.JFrame {
                         mode.addElement(users.get(i).getNombre());
                     }
                     cb_elim.setModel(mode);
-
+                    */
                     if (users.contains(Kim) == false) {
                         Kim.setNombre("Kim Kardashan");
                         Kim.setUser("Kim");
@@ -753,9 +577,12 @@ public class Login extends javax.swing.JFrame {
                         DefaultComboBoxModel mod2 = (DefaultComboBoxModel) cb_elim.getModel();
                         mode.addElement(Kim);
                         cb_elim.setModel(mod2);
+                        DefaultComboBoxModel c = (DefaultComboBoxModel) cb_mensaje.getModel();
+                        c.addElement(Kim);
+                        cb_mensaje.setModel(c);
                     }
                     if (actual.equals(Kim)) {
-
+                        
                     } else {
                         tp_elim.setEnabled(false);
                         tp_mod.setEnabled(false);
@@ -770,10 +597,6 @@ public class Login extends javax.swing.JFrame {
         tf_logname.setText("");
         tf_logcontra.setText("");
     }//GEN-LAST:event_bt_loginMouseClicked
-
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
 
     private void cb_dueñoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cb_dueñoActionPerformed
         // TODO add your handling code here:
@@ -800,6 +623,12 @@ public class Login extends javax.swing.JFrame {
             mode.addElement(users.get(i).getNombre());
         }
         cb_elim.setModel(mode);
+        DefaultComboBoxModel m = (DefaultComboBoxModel) cb_mensaje.getModel();
+        m.removeAllElements();
+        for (int i = 0; i < users.size(); i++) {
+            m.addElement(users.get(i).getNombre());
+        }
+        cb_mensaje.setModel(m);
     }//GEN-LAST:event_jButton4MouseClicked
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
@@ -813,7 +642,7 @@ public class Login extends javax.swing.JFrame {
 
     private void CrearMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CrearMouseClicked
         // TODO add your handling code here:
-        Color color = bt_color.getForeground();
+        Color color = bt_color.getBackground();
         String descrip = tf_descript.getText();
         String marca = tf_marca.getText();
         int tam = Integer.parseInt(tf_tamaño.getText());
@@ -825,13 +654,32 @@ public class Login extends javax.swing.JFrame {
             int confort = Integer.parseInt(tf_confort.getText());
             String suela = tf_suela.getText();
             ((Familiares) (due)).getPertenencias().add(new Zapatos(Integer.toString(talla), suela, confort, color, descrip, marca, tam, calidad, precio, due));
-
+            bt_color.setBackground(Color.red);
+            tf_descript.setText("");
+            tf_marca.setText("");
+            tf_tamaño.setText("");
+            tf_calidad.setText("");
+            tf_precio.setText("");
+            cb_dueño.setSelectedIndex(0);
+            jTextField6.setText("");
+            tf_confort.setText("");
+            tf_suela.setText("");
+            
         } else if (rb_r.isSelected()) {
             int talla = Integer.parseInt(tf_talla.getText());
             String material = tf_material.getText();
             String paiselab = tf_pelab.getText();
             ((Familiares) (due)).getPertenencias().add(new Ropa(talla, material, paiselab, color, descrip, marca, tam, calidad, precio, due));
-
+            bt_color.setBackground(Color.red);
+            tf_descript.setText("");
+            tf_marca.setText("");
+            tf_tamaño.setText("");
+            tf_calidad.setText("");
+            tf_precio.setText("");
+            cb_dueño.setSelectedIndex(0);
+            tf_talla.setText("");
+            tf_material.setText("");
+            tf_pelab.setText("");
         } else {
             Date lifetime = j_datelife.getDate();
             Date fechac = j_datefc.getDate();
@@ -845,12 +693,166 @@ public class Login extends javax.swing.JFrame {
             }
             String instruc = tf_instruc.getText();
             ((Familiares) (due)).getPertenencias().add(new ObjetosHogar(lifetime, area, instruc, fechac, color, descrip, marca, tam, calidad, precio, due));
+            bt_color.setBackground(Color.red);
+            tf_descript.setText("");
+            tf_marca.setText("");
+            tf_tamaño.setText("");
+            tf_calidad.setText("");
+            tf_precio.setText("");
+            cb_dueño.setSelectedIndex(0);
+            j_datelife.setDate(new Date());
+            j_datefc.setDate(new Date());
+            tf_instruc.setText("");
         }
     }//GEN-LAST:event_CrearMouseClicked
 
     private void bt_loginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_loginActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_bt_loginActionPerformed
+
+    private void rb_madreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rb_madreActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_rb_madreActionPerformed
+
+    private void Registrar2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Registrar2MouseClicked
+        // TODO add your handling code here:
+        //Antes pedia las cosas especificas de cada tipo pero nose como ni porque se borro
+        boolean val = false;
+        for (int i = 0; i < users.size(); i++) {
+            if (users.get(i).getUser().equals(tf_usern.getText())) {
+                JOptionPane.showMessageDialog(this, "El usuario ya existe");
+                val = false;
+                break;
+            } else {
+                val = true;
+            }
+        }
+        boolean val2 = false;
+        if (val == true) {
+            String nombre = tf_nombre.getText();
+            String user = tf_usern.getText();
+            String sexo = tf_sex.getText();
+            String contra = tf_contraa.getText();
+            int id = Integer.parseInt(tf_ident.getText());
+            String est = tf_ec.getText();
+            int edad = Integer.parseInt(tf_age.getText());
+            String rol = "";
+            if (rb_madre.isSelected()) {
+                for (int i = 0; i < users.size(); i++) {
+                    if (users.get(i) instanceof Madre) {
+                        JOptionPane.showMessageDialog(this, "Ya existe una madre");
+                        val2 = false;
+                        break;
+                    } else {
+                        val2 = true;
+                    }
+                }
+                if (val2 == true) {
+                    rol = "Madre";
+                    users.add(new Madre(nombre, edad, id, sexo, est, user, contra, rol));
+                    Register.setVisible(false);
+                    this.setVisible(true);
+                }
+            } else if (rb_padre.isSelected()) {
+                for (int i = 0; i < users.size(); i++) {
+                    if (users.get(i) instanceof Padre) {
+                        JOptionPane.showMessageDialog(this, "Ya existe un padre");
+                        val2 = false;
+                        break;
+                    } else {
+                        val2 = true;
+                    }
+                }
+                if (val2 == true) {
+                    users.add(new Padre(nombre, edad, id, sexo, est, user, contra, rol));
+                    Register.setVisible(false);
+                    this.setVisible(true);
+                }
+            } else if (rb_hermano.isSelected()) {
+                for (int i = 0; i < users.size(); i++) {
+                    if (users.get(i) instanceof Hermano) {
+                        JOptionPane.showMessageDialog(this, "Ya existe un hermano");
+                        val2 = false;
+                        break;
+                    } else {
+                        val2 = true;
+                    }
+                }
+                if (val2 == true) {
+                    users.add(new Hermano(nombre, edad, id, sexo, est, user, contra, rol));
+                    Register.setVisible(false);
+                    this.setVisible(true);
+                }
+            } else if (rb_hermana.isSelected()) {
+                int cont = 0;
+                for (int i = 0; i < users.size(); i++) {
+                    if (users.get(i) instanceof Hermana) {
+                        cont++;
+                    }
+                }
+                if (cont == 4) {
+                    JOptionPane.showMessageDialog(this, "Ya estan las 4 hermanas");
+                    val2 = false;
+                } else {
+                    val2 = true;
+                }
+                if (val2 == true) {
+                    users.add(new Hermana(nombre, edad, id, sexo, est, user, contra, rol));
+                    Register.setVisible(false);
+                    this.setVisible(true);
+                }
+            } else if (rb_esposo.isSelected()) {
+                for (int i = 0; i < users.size(); i++) {
+                    if (users.get(i) instanceof Esposo) {
+                        JOptionPane.showMessageDialog(this, "Ya existe un esposo");
+                        val2 = false;
+                        break;
+                    } else {
+                        val2 = true;
+                    }
+                }
+                if (val2 == true) {
+                    users.add(new Esposo(nombre, edad, id, sexo, est, user, contra, rol));
+                    Register.setVisible(false);
+                    this.setVisible(true);
+                }
+            } else {
+                users.add(new Personal(nombre, edad, id, sexo, est, user, contra, rol));
+                Register.setVisible(false);
+                this.setVisible(true);
+            }
+            DefaultComboBoxModel model = (DefaultComboBoxModel) cb_dueño.getModel();
+            model.addElement(users.get(users.size() - 1));
+            cb_dueño.setModel(model);
+            DefaultComboBoxModel mode = (DefaultComboBoxModel) cb_elim.getModel();
+            mode.addElement(users.get(users.size() - 1));
+            cb_elim.setModel(mode);
+            DefaultComboBoxModel mod = (DefaultComboBoxModel) cb_list.getModel();
+            mod.addElement(users.get(users.size() - 1));
+            cb_list.setModel(mod);
+            DefaultComboBoxModel m = (DefaultComboBoxModel) cb_mensaje.getModel();
+            m.addElement(users.get(users.size() - 1));
+            cb_mensaje.setModel(m);
+            
+        }
+
+    }//GEN-LAST:event_Registrar2MouseClicked
+
+    private void sendMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_sendMouseClicked
+        // TODO add your handling code here:
+        Personas destinatario = (Personas) cb_mensaje.getSelectedItem();
+        String msg = ta_mensaje.getText();
+        ((Familiares) (destinatario)).getMsgs().add(new Mensajes(destinatario, msg));
+        ta_mensaje.setText("");
+    }//GEN-LAST:event_sendMouseClicked
+
+    private void seeMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_seeMouseClicked
+        // TODO add your handling code here:
+        for (int i = 0; i < ((Familiares) (actual)).getMsgs().size(); i++) {
+            JOptionPane.showMessageDialog(this, "De: " + actual.getNombre() + "\n" + ((Familiares) (actual)).getMsgs().get(i).toString());
+        }
+
+    }//GEN-LAST:event_seeMouseClicked
 
     /**
      * @param args the command line arguments
@@ -896,6 +898,8 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JButton Crear;
     private javax.swing.ButtonGroup Familia;
     private javax.swing.JFrame Register;
+    private javax.swing.JButton Registrar2;
+    private javax.swing.ButtonGroup Rol;
     private javax.swing.ButtonGroup Sexo;
     private javax.swing.ButtonGroup Tipo;
     private javax.swing.JButton bt_color;
@@ -905,21 +909,9 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> cb_dueño;
     private javax.swing.JComboBox<String> cb_elim;
     private javax.swing.JComboBox<String> cb_list;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
+    private javax.swing.JComboBox<String> cb_mensaje;
     private javax.swing.JButton jButton4;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel12;
-    private javax.swing.JLabel jLabel13;
-    private javax.swing.JLabel jLabel14;
-    private javax.swing.JLabel jLabel15;
-    private javax.swing.JLabel jLabel16;
-    private javax.swing.JLabel jLabel17;
-    private javax.swing.JLabel jLabel18;
-    private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel21;
@@ -947,57 +939,57 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel41;
     private javax.swing.JLabel jLabel42;
     private javax.swing.JLabel jLabel43;
+    private javax.swing.JLabel jLabel44;
+    private javax.swing.JLabel jLabel45;
+    private javax.swing.JLabel jLabel46;
+    private javax.swing.JLabel jLabel47;
+    private javax.swing.JLabel jLabel48;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JTable jTable1;
     private javax.swing.JTextField jTextField6;
     private com.toedter.calendar.JDateChooser j_datefc;
     private com.toedter.calendar.JDateChooser j_datelife;
-    private com.toedter.calendar.JDateChooser j_datet;
     private javax.swing.JRadioButton rb_cocina;
     private javax.swing.JRadioButton rb_esposo;
-    private javax.swing.JRadioButton rb_f;
     private javax.swing.JRadioButton rb_h;
     private javax.swing.JRadioButton rb_habitacion;
     private javax.swing.JRadioButton rb_hermana;
     private javax.swing.JRadioButton rb_hermano;
-    private javax.swing.JRadioButton rb_m;
     private javax.swing.JRadioButton rb_madre;
     private javax.swing.JRadioButton rb_padre;
     private javax.swing.JRadioButton rb_personal;
     private javax.swing.JRadioButton rb_r;
     private javax.swing.JRadioButton rb_sala;
     private javax.swing.JRadioButton rb_z;
+    private javax.swing.JButton see;
+    private javax.swing.JButton send;
+    private javax.swing.JTextArea ta_mensaje;
+    private javax.swing.JTextField tf_age;
     private javax.swing.JTextField tf_calidad;
     private javax.swing.JTextField tf_confort;
+    private javax.swing.JTextField tf_contraa;
     private javax.swing.JTextField tf_descript;
+    private javax.swing.JTextField tf_ec;
+    private javax.swing.JTextField tf_ident;
     private javax.swing.JTextField tf_instruc;
     private javax.swing.JTextField tf_logcontra;
     private javax.swing.JTextField tf_logname;
     private javax.swing.JTextField tf_marca;
     private javax.swing.JTextField tf_material;
+    private javax.swing.JTextField tf_nombre;
     private javax.swing.JTextField tf_pelab;
     private javax.swing.JTextField tf_precio;
-    private javax.swing.JTextField tf_regalt;
-    private javax.swing.JTextField tf_regcontra;
-    private javax.swing.JTextField tf_regedad;
-    private javax.swing.JTextField tf_regestc;
-    private javax.swing.JTextField tf_reghora;
-    private javax.swing.JTextField tf_regid;
-    private javax.swing.JTextField tf_regname;
-    private javax.swing.JTextField tf_regocu;
-    private javax.swing.JTextField tf_regpeso;
-    private javax.swing.JTextField tf_regsuel;
-    private javax.swing.JTextField tf_regtrab;
-    private javax.swing.JTextField tf_reguser;
+    private javax.swing.JTextField tf_sex;
     private javax.swing.JTextField tf_suela;
     private javax.swing.JTextField tf_talla;
     private javax.swing.JTextField tf_tamaño;
+    private javax.swing.JTextField tf_usern;
     private javax.swing.JPanel tp_create;
     private javax.swing.JPanel tp_elim;
     private javax.swing.JPanel tp_list;

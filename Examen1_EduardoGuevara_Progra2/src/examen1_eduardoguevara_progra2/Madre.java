@@ -9,10 +9,14 @@ package examen1_eduardoguevara_progra2;
  *
  * @author edujg
  */
-public class Madre extends Familiares{
+public class Madre extends Familiares {
 
     public Madre() {
         super();
+    }
+
+    public Madre(String nombre, int edad, int id, String sexo, String estadoc, String user, String contra, String rol) {
+        super(nombre, edad, id, sexo, estadoc, user, contra, rol);
     }
 
     public Madre(String trabajo, float altura, float peso, String nombre, int edad, int id, String sexo, String estadoc, String user, String contra, String rol) {
@@ -24,9 +28,4 @@ public class Madre extends Familiares{
         return super.getNombre();
     }
 
-    
-
-    
-    
-    
 }

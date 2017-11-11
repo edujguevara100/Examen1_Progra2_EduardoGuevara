@@ -15,6 +15,10 @@ public class Padre extends Familiares {
         super();
     }
 
+    public Padre(String nombre, int edad, int id, String sexo, String estadoc, String user, String contra, String rol) {
+        super(nombre, edad, id, sexo, estadoc, user, contra, rol);
+    }
+
     public Padre(String trabajo, float altura, float peso, String nombre, int edad, int id, String sexo, String estadoc, String user, String contra, String rol) {
         super(trabajo, altura, peso, nombre, edad, id, sexo, estadoc, user, contra, rol);
     }
